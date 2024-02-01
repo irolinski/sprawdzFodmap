@@ -1,0 +1,53 @@
+.card{
+    margin: 1rem;
+    padding: 0rem 2rem 2rem 2rem; 
+    min-width: 250px;
+    max-width: 250px;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.15) 1px 3px 3px 2px;
+    border-radius: 7px;
+
+}
+
+.title{
+    margin-bottom: 0px;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.sub-title{
+    color: rgba(0, 0, 0, 0.65);
+}
+
+main > div{
+    display: inline-flex;
+    margin-top: 1rem;
+}
+
+.circle{
+    border-radius: 75px;
+    height: 22px;
+    width: 22px;
+    min-width: 22px;
+    border: 5px solid white;
+    box-shadow: inset rgb(0 0 0) 0px 0px 0px 2px, rgb(255, 255, 255) 0px 0px 0px 0px, rgb(0 0 0) 0px 0px 0px 0.5px;
+    margin: 0px 10px 0px 5px;
+    text-align: center;
+}
+
+.max-amount{
+    margin: 5px 10px 5px 5px;
+    font-size: larger;
+    font-weight: 600;
+    transform: translateY(-5px);
+}
+
+.histamine-num{
+    display: block;
+    font-weight: 600;
+    transform: translateY(2px);
+}
+
+#notes-div > h4{
+    display: contents;
+}
