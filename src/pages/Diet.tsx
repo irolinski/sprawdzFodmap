@@ -2,15 +2,17 @@ import {CircularProgress, TextField } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import './Diet.css'
 import { useEffect, useState } from "react";
-import Results from "./Results";
 import DietCard from "./DietCard";
 
-// const fruitData: string[] = ["Apple", "Orange", "Banana"];
-
-function search(arr: string[], q: string){
-    return arr.filter((i) => i.toLowerCase().includes(q.toLowerCase()));
+export type productProp = {
+    name: string,
+    sub_title: string,
+    fodmap: string,
+    max_use: string,
+    histamine: string,
+    notes: string,
+    key: string
 }
-
 
 export function Diet() {
 
@@ -22,43 +24,58 @@ export function Diet() {
         .then(data => setProducts(data));
     }, []);
 
-    // console.log(products)
 
+
+function search(arr: Array<productProp>, q: string){
+
+
+    const a: Array<productProp> = [];
+    (arr.map((p) => 
+        (p.name && p.name.toLowerCase().includes(q.toLowerCase())
+        || p.sub_title && p.sub_title.toLowerCase().includes(q.toLowerCase()))
+        && a.push(p)))
+
+    return a
+}
   
 
-    // const [filteredData, setFilteredData] = useState(fruitData)
-    // const [showLoading, setShowLoading] = useState(false)
+    const [filteredData, setFilteredData] = useState(products)
+    const [showLoading, setShowLoading] = useState(false)
 
-    // const searchData = async (evt: React.ChangeEvent<HTMLInputElement>) => {
+    const searchData = async (evt: React.ChangeEvent<HTMLInputElement>) => {
 
-    //     setShowLoading(true)
+        setShowLoading(true)
 
-    //     const query = evt.currentTarget.value;
-    //     let results = [...fruitData]
-    //     results = search(results, query)
-    //     setFilteredData(results)
+        let results = [...products]
+        const query = evt.currentTarget.value;
 
-    //     setTimeout (() => {setShowLoading(false)}, 400)
+        results = search(results, query);
+
+        (query != '') ? setFilteredData(results) : setFilteredData([]);
+
+        setTimeout (() => {setShowLoading(false)}, 400)
 
 
-    // }    
+    }    
 
 
     return(
 
         <Grid container spacing={2}>
             <Grid xs={12} md={10} className="diet-grid">
-                {/* <TextField className="search-input" label="Wprowadź nazwę produktu" variant="standard" onChange={searchData} /> */}
+                <TextField className="search-input" label="Wprowadź nazwę produktu" variant="standard" onChange={searchData} />
             </Grid>
             <Grid xs={12} className="diet-grid">
-                    {/* { showLoading ? <CircularProgress id="loading" color="inherit" /> : <Results data={filteredData} /> } */}
-                    <div>
-            {products.map((p) => {
-                return( <DietCard name={p.name} sub_title={p.sub_title} fodmap={p.fodmap_mon} max_use={p.max_use} histamine={p.histamine} notes={p.notes} />
-                )
-            })}
-    </div>
-        
+                    { showLoading && <CircularProgress id="loading" color="inherit" />  }
+                    { !showLoading && 
+                        <div>
+                            {filteredData.map((p) => {
+                                return( <DietCard name={p.name} sub_title={p.sub_title} fodmap={p.fodmap_mon} max_use={p.max_use} histamine={p.histamine} notes={p.notes} key={p.id} />
+                                )
+                            })}
+                        </div>
+                    }
+
             </Grid>
         </Grid>
 

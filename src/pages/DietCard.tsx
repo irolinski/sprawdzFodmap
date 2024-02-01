@@ -1,17 +1,8 @@
 import './DietCard.css'
 
-type productProp = {
-    name: string,
-    sub_title: string,
-    fodmap: string,
-    max_use: string,
-    histamine: string,
-    notes: string
-}
+import { productProp } from './Diet'
 
 export default function DietCard({ name, sub_title, fodmap, max_use, histamine, notes }: productProp) {
-
-console.log(sub_title);
 
     return(
 
