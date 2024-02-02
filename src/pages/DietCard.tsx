@@ -6,7 +6,7 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
 
     return(
 
-    <div className='card'>
+    <div className='diet-card'>
         <header>
             <h3 className="title">{name}</h3>
             <span className="sub-title">{sub_title}</span>

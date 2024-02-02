@@ -31,7 +31,7 @@ app.use(express.static('build'));
 
 app.get('/seed', async (req, res, next) => {
 
-    const seedQuery = fs.readFileSync('./seeds/dummy.sql', { encoding: 'utf8' })
+    const seedQuery = fs.readFileSync('./seeds/recipes.sql', { encoding: 'utf8' })
     client.query(seedQuery, (err: any, res: any) => {
     console.log(err, res)
     console.log('Seeding Completed!')
@@ -39,33 +39,17 @@ app.get('/seed', async (req, res, next) => {
 })
 
 app.get('/api/diet', async (req, res, next) => {
-    let q = await client.query('select * from dummy_db')
+    const q = await client.query('select * from dummy_db')
    //  console.log(q.fields.map(field => field.name))
     // console.log(q.rows)
      res.send(q.rows)
 })
    
-
-app.get('/api/items', (req: any, res: any) => {
-
-    const items = [
-        {
-            name: "laptop",
-            price: 500,
-        },
-        {
-            name: "top",
-            price: 444440,
-        },
-        {
-            name: "hard drive by art blakey",
-            price: 2000,
-        },
-    ]
-    
-    res.send(items)
+app.get('/api/recipes', async(req, res, next) => {
+    const q = await client.query('select * from recipes_db')
+    console.log(q.rows);
+    res.send(q.rows)
 })
-
 
 
 app.listen(PORT, () => console.log(`Listening on ${PORT}`));

@@ -35,7 +35,7 @@ function search(arr: Array<productProp>, q: string){
         || p.sub_title && p.sub_title.toLowerCase().includes(q.toLowerCase()))
         && a.push(p)))
 
-    return a
+        return a
 }
   
 
@@ -55,9 +55,7 @@ function search(arr: Array<productProp>, q: string){
 
         setTimeout (() => {setShowLoading(false)}, 400)
 
-
     }    
-
 
     return(
 
@@ -75,11 +73,7 @@ function search(arr: Array<productProp>, q: string){
                             })}
                         </div>
                     }
-
             </Grid>
         </Grid>
-
-
-
     )
 }   

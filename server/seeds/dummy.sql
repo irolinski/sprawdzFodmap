@@ -1,13 +1,13 @@
 DROP TABLE IF EXISTS "dummy_db";
 
 CREATE TABLE IF NOT EXISTS "dummy_db" (
+    "id" SERIAL PRIMARY KEY, 
     "name" TEXT,
     "sub_title" TEXT,
     "fodmap_mon" TEXT,
     "max_use" TEXT,
     "category" TEXT,
     "histamine" TEXT,
-    "id" TEXT,
     "notes" TEXT
 );
 INSERT INTO "dummy_db" VALUES ('Miód malinowy',NULL,'low','2 łyżki','cukry','high','f_001',NULL),
