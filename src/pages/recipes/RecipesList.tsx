@@ -6,21 +6,23 @@ export default function RecipesList() {
 
 
 
-    const [products, setProducts] = useState<any[]>([]);
+    const [recipes, setRecipes] = useState<String[]>([]);
 
     useEffect(() => {
         fetch('/api/recipes')
         .then(res => res.json())
-        .then(data => setProducts(data));
+        .then(data => setRecipes(data));
     }, []);
-
 
 
     return(
         <div>
             <h1>Recipes List</h1>
             <div className="recipe-card-div">
-                <RecipeCard />
+                {recipes.map((recipes) => {
+                    return (<RecipeCard r={ recipes } />)
+                }
+                )}
             </div>
         </div>
 

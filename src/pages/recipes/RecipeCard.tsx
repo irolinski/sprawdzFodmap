@@ -1,59 +1,104 @@
+import Moment from 'react-moment'
 import './RecipeCard.css'
 
-export default function RecipeCard() {
+import AccessTimeFilledIcon from '@mui/icons-material/AccessTimeFilled';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
+import KitchenIcon from '@mui/icons-material/Kitchen';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import DescriptionIcon from '@mui/icons-material/Description';
 
+import { Rating, Typography } from '@mui/material';
+
+// type recipeProp = {
+//     name: String,
+//     prep_time_min: Number,
+//     ingredients: String[],
+//     amount: String,
+//     equipment: String,
+//     category: String[],
+//     description: String,
+//     recipe_text: String,
+//     photo: String,
+//     ratings: Number[],
+//     date: Date,
+//     id: String
+// }
+
+export default function RecipeCard( { r }: any) {
+
+
+    const averageRating = function () {
+        let arr = r.ratings
+        let sum = 0
+        for (let i = 0; i < arr.length; i++){
+            sum += Number(arr[i])
+        }
+        return (sum / arr.length)
+    }
+
+    const rating = averageRating()
+
+    const capitalize = function (str: String){
+        return str[0].toUpperCase() + str.slice(1);
+    }
+
+    const returnIngredients = function () {
+        
+        const obj: String[] = [] 
+        const arr = r.ingredients
+
+       for (let i = 0; i < arr.length - 1; i++){
+            obj.push(`${capitalize(arr[i])}, `)
+       }
+       obj.push(`${capitalize(arr[arr.length-1])}`)
+
+       return obj
+    }
+
+    
     return(
-    <div className='recipe-card'>
+
+     <div className='recipe-card'>
 
 
-        <img className="recipe-image" src="https://na-talerzu.pl/wp-content/uploads/2021/07/Kurczak-z-cukinia-i-papryka-5338.jpg" />
+        <img className="recipe-image" src={r.photo} />
 
         <header>
-            <h1 className="title">Nazwa</h1> 
+            <h1 className="title">{r.name}</h1> 
             <div id="recipe-info-div">
                 <div className="recipe-info-1">
-                    <span>Czas: 60min</span>
+                    <span><AccessTimeFilledIcon fontSize='small' /> Czas: {r.prep_time_min}</span>
                     <span className="portion">
-                        Na porcję: 2 talerze
-                    </span>
-                </div>
-                <div className="recipe-info-2">
-                    <span className="tools">
-                        Narzędzia: Piekarnik, ryzowar
+                        <RestaurantIcon fontSize='small'/> {r.amount}
                     </span>
                 </div>
             </div>
         </header>
         <main>
             <div id="ingredients-div">
-                
-
-                <span>Składniki: <br/>
-                    Masło 200g,
-                    Rukola 1kg,
-                    Cukier 5 szczypt i pół łyzki
+                <span><KitchenIcon fontSize='small'/> Składniki: <br />
+                {returnIngredients()}
                 </span>
             </div>
 
             <div id="description-div">
-                Opis: <br />
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur aut beatae alias, culpa voluptates, officiis reprehenderit minus adipisci veniam ullam eaque minima nemo nostrum nam. Corrupti temporibus explicabo facere consequatur. Lorem, ipsum dolor. Lorem ipsum, dolor sit amet.
+                <DescriptionIcon /> Opis: <br />
+                {r.description}
             </div>
         </main>
 
         <footer>
                 <div id="rating-div">
-                    Ocena: *****
+                    <Typography component="legend">Ocena: {rating} </Typography>
+                    <Rating name="half-rating-read" defaultValue={rating} precision={0.2} readOnly />
                 </div>
                 <div id="date-div">
-                    Data dodania: 2015-22-02
+                    <CalendarMonthIcon /> <Moment format="DD/MM/YY">{r.date}</Moment>
                 </div>
         </footer>
 
     </div>
+    
     )
 
 }
-
-
-
