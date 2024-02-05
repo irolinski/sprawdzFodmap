@@ -2,7 +2,7 @@ DROP TABLE IF EXISTS "recipes_db";
 
 CREATE TABLE IF NOT EXISTS "recipes_db" (
     "name" VARCHAR(40),
-    "prep_time_min" INT,
+    "prep_time" INT,
     "ingredients" varchar(40) [], -- array of ids
     "amount" VARCHAR(30),
     "equipment" VARCHAR(120),
@@ -11,7 +11,9 @@ CREATE TABLE IF NOT EXISTS "recipes_db" (
     "recipe_text" VARCHAR(1000),
     "photo" VARCHAR(1000),
     "ratings" integer [],
+    "author" VARCHAR(40) DEFAULT 'anonymous'
     "date" DATE,
+    "verified" BOOLEAN DEFAULT FALSE,
     "id" SERIAL
 );
 

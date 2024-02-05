@@ -26,6 +26,8 @@ import { Rating, Typography } from '@mui/material';
 
 export default function RecipeCard( { r }: any) {
 
+    console.log(r)
+
 
     const averageRating = function () {
         let arr = r.ratings
