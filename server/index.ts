@@ -31,7 +31,7 @@ app.use(express.static('build'));
 
 app.get('/seed', async (req, res, next) => {
 
-    const seedQuery = fs.readFileSync('./seeds/recipes.sql', { encoding: 'utf8' })
+    const seedQuery = fs.readFileSync('./seeds/fodmap_table.sql', { encoding: 'utf8' })
     client.query(seedQuery, (err: any, res: any) => {
     console.log(err, res)
     console.log('Seeding Completed!')
@@ -39,7 +39,7 @@ app.get('/seed', async (req, res, next) => {
 })
 
 app.get('/api/diet', async (req, res, next) => {
-    const q = await client.query('select * from dummy_db')
+    const q = await client.query('select * from fodmap_table')
    //  console.log(q.fields.map(field => field.name))
     // console.log(q.rows)
      res.send(q.rows)

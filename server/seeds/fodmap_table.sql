@@ -1,4 +1,4 @@
-CREATE TABLE IF NOT EXISTS "fodmap_tabela_1_1" (
+CREATE TABLE IF NOT EXISTS "fodmap_table" (
     "name" TEXT,
     "sub_title" TEXT,
     "fodmap_mon" TEXT,
@@ -8,7 +8,7 @@ CREATE TABLE IF NOT EXISTS "fodmap_tabela_1_1" (
     "id" TEXT,
     "notes" TEXT
 );
-INSERT INTO "fodmap_tabela_1_1" VALUES ('Miód malinowy',NULL,'low','2 łyżki','cukry',NULL,'f_001',NULL),
+INSERT INTO "fodmap_table" VALUES ('Miód malinowy',NULL,'low','2 łyżki','cukry',NULL,'f_001',NULL),
 	('Miód koniczynowy',NULL,'low','2 łyżki','cukry',NULL,'f_002',NULL),
 	('Miód z bawełny',NULL,'low','2 łyżki','cukry',NULL,'f_003',NULL),
 	('Miód ',NULL,'high',NULL,'cukry',NULL,'f_004',NULL),
@@ -258,7 +258,7 @@ INSERT INTO "fodmap_tabela_1_1" VALUES ('Miód malinowy',NULL,'low','2 łyżki',
 	('Grzyby Shiitake, suszone',NULL,'mid','7g','warzywa',NULL,'f_249',NULL),
 	('Oliwki, zielone, bez pestek',NULL,'low',NULL,'warzywa',NULL,'f_250',NULL),
 	('Cebula marynowana',NULL,'high',NULL,'warzywa',NULL,'f_251',NULL);
-INSERT INTO "fodmap_tabela_1_1" VALUES ('Kluski ziemniaczane, pyzy',NULL,'low',NULL,'warzywa',NULL,'f_252',NULL),
+INSERT INTO "fodmap_table" VALUES ('Kluski ziemniaczane, pyzy',NULL,'low',NULL,'warzywa',NULL,'f_252',NULL),
 	('Dynia, z puszki',NULL,'mid','60g','warzywa',NULL,'f_253',NULL),
 	('Wodorosty nori',NULL,'high',NULL,'warzywa',NULL,'f_254',NULL),
 	('Pomidor, z puszki',NULL,'high',NULL,'warzywa',NULL,'f_255',NULL),
