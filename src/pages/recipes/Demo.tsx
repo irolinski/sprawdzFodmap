@@ -39,7 +39,6 @@ export default function Demo() {
 
   const handleNext = () => {
 
-
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
 
@@ -66,7 +65,7 @@ export default function Demo() {
   };
 
 
-  const recipeForm = useForm<InputTypes> ({
+const recipeForm = useForm<InputTypes> ({
     defaultValues: {
         name: '',
         prep_time: null,
@@ -83,7 +82,7 @@ export default function Demo() {
         //id
         
     }
-    });
+});
 
 
 const { register, unregister, handleSubmit } = recipeForm;
@@ -134,7 +133,7 @@ const ingInput = (i: any) => {
     };
 
     return (
-    <Grid className="grid-element" container item xs={12} spacing={2} key={i}>
+    <Grid  container item xs={12} spacing={2} key={i}>
 
         <Grid item xs={7}>
             <TextField label={nameLabel} type="text" onKeyDown={addIngInputOnEnter} 
@@ -195,24 +194,21 @@ const returnIngRow = () => {
 
                 return (
                     <Step key={label} {...stepProps}>
-                        <StepLabel {...labelProps}>{label}</StepLabel>
+                        <StepLabel {...labelProps}> {activeStep === index && label}</StepLabel>
                     </Step>
                 );
                 })}
             </Stepper>
             
-            {activeStep === steps.length ? (
-                null
-            ) : (
+            {activeStep !== steps.length && (
                 <React.Fragment>
 
                 { activeStep === 0 && (
-                    <div>
-
-                        <Grid className="grid-element" item xs={12}>
+                    <Grid container>
+                        <Grid  item xs={12}>
                             <TextField label="Nazwa dania" type="text" {...register('name')} />
                         </Grid>
-                        <Grid className="grid-element" item xs={12}>
+                        <Grid  item xs={12}>
                             <Autocomplete value={categories} onChange={(event, newValue) => { setCategories(newValue); }}
                                 multiple id="tags-filled" options={categoryList.map((option) => option.name)} 
                                 renderTags={
@@ -227,7 +223,7 @@ const returnIngRow = () => {
                                 )}
                             />
                         </ Grid>
-                    </div>
+                    </Grid>
                 )}
 
                 { activeStep === 1 && (
@@ -243,7 +239,7 @@ const returnIngRow = () => {
                         <Typography variant="h6" id="time-span">min.</Typography>
                     </Grid>
 
-                    <Grid className="grid-element" item xs={12}>
+                    <Grid  item xs={12}>
                             <Autocomplete value={equipment} onChange={(event, newValue) => { setEquipment(newValue); }}
                                 multiple  options={equipmentList.map((option) => option.name)} 
                                 freeSolo
@@ -270,11 +266,11 @@ const returnIngRow = () => {
 
                 { activeStep === 3 && (
                     <Grid container>
-                        <Grid className="grid-element" item xs={12}>
+                        <Grid  item xs={12}>
                                 <FormLabel>Krótki opis:</FormLabel>
                                 <TextField fullWidth multiline={true} rows={3} {...register('description')}/>
                         </Grid>
-                        <Grid className="grid-element" item xs={12}>
+                        <Grid  item xs={12}>
                                 <FormLabel>Zdjęcie:</FormLabel>
                                 <TextField fullWidth placeholder="Wprowadź adres URL" {...register('photo')}/>
                         </Grid>
@@ -283,13 +279,13 @@ const returnIngRow = () => {
 
                 { activeStep === 4 && (
                     <Grid container>
-                        <Grid className="grid-element" item xs={12}>
+                        <Grid  item xs={12}>
                                 <FormLabel>Przepis:</FormLabel>
                                 <Textarea  minRows={10} maxRows={20} size="lg" defaultValue={recipeTemplate} 
                                 // onClick={() => setSetRecipeTemplate()}
                                 {...register('recipe_text')} placeholder="..." />
                         </Grid>
-                        <Grid className="grid-element" item xs={6}>
+                        <Grid  item xs={6}>
                             <TextField label="Podpisz się :) " type="text" {...register('author')}/>
                         </Grid>
                     </Grid>
