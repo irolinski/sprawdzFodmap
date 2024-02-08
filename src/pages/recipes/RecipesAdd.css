@@ -1,16 +1,27 @@
+
 #add-recipes-form > div {
     margin: auto;
     margin-top: 20vh;
 }
 
-.grid-element {
-    margin: 20px !important
+.form-step-wrapper{
+    margin: 3em 0em 3em 0em;
+}
+
+.input-label{
+    margin-bottom: 2em !important;
+}
+
+#time-span{
+    transform: translate(10px, 10px);
 }
 
 #circle-icon-grid-el{
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    padding-left: 0.5em;
 }
 
 #circle-icon-grid-el > .add-ing-input,

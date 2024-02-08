@@ -23,9 +23,13 @@ import moment from 'moment';
 import './RecipesAdd.css';
 import { Textarea } from '@mui/joy';
 
+import '@fontsource/roboto/400.css';
+import Header from '../../components/Header';
 
 
-const steps = ['Ogólne informacje', 'Dane', 'Składniki', 'Zdjęcie i opis', 'Przepis'];
+// stepper set up
+
+const steps = ['Ogólne', 'Dane', 'Składniki', 'Zdjęcie i skrót', 'Przepis'];
 
 
 
@@ -64,6 +68,7 @@ export default function Demo() {
     setActiveStep(0);
   };
 
+// form set up
 
 const recipeForm = useForm<InputTypes> ({
     defaultValues: {
@@ -75,7 +80,7 @@ const recipeForm = useForm<InputTypes> ({
         description: '',
         recipe_text: '',
         photo: '',
-        ratings: [ 3,],
+        ratings: [],
         author: '',
         date: null, // to be hidden
         //verified
@@ -83,7 +88,6 @@ const recipeForm = useForm<InputTypes> ({
         
     }
 });
-
 
 const { register, unregister, handleSubmit } = recipeForm;
 
@@ -102,20 +106,15 @@ const submitForm = (data: any) => {
     console.log(data)
 };
 
-
 const [categories, setCategories] = useState<any[]>([])
+const [numIngredients, setNumIngredients] = useState<any>(4)
 let [equipment, setEquipment] = useState<any>([])
-const [recipeTemplate, setRecipeTemplate] = useState<any>('')
 
-const [numIngredients, setNumIngredients] = useState<any>(1)
-
-
-
+// set-up of the ingredient form
 
 const ingInput = (i: any) => {
 
     const nameLabel = 'Składnik ' + i;
-
     const registerName = 'ingredient' + i;
 
     const addIngInput = () => {
@@ -133,7 +132,7 @@ const ingInput = (i: any) => {
     };
 
     return (
-    <Grid  container item xs={12} spacing={2} key={i}>
+    <Grid  container xs={12} sx={{mb: 3}} key={i}>
 
         <Grid item xs={7}>
             <TextField label={nameLabel} type="text" onKeyDown={addIngInputOnEnter} 
@@ -148,16 +147,16 @@ const ingInput = (i: any) => {
         { i === numIngredients && ( 
         <Grid id="circle-icon-grid-el" item xs={1}>
             { i !== 15 && (
-                <AddCircleIcon className="add-ing-input" onClick={addIngInput}/>
+                <AddCircleIcon className="add-ing-input" onClick={addIngInput} sx={{ color: 'green' }} />
             )}
             { i !== 1 && (
-                <RemoveCircleIcon className="remove-ing-input" onClick={removeIngInput} />
+                <RemoveCircleIcon className="remove-ing-input" onClick={removeIngInput}  sx={{ color: 'red' }} />
             )}
         </Grid>
         )}
 
         { i === 15 && (
-            <Typography> 
+            <Typography sx={{mt: 2}}> 
                 You can't add more than 15 ingredients, sorry! 😔 
             </Typography>
         )}
@@ -178,14 +177,18 @@ const returnIngRow = () => {
 }
 
 
-
+// the main actual page starts here
 
   return (
     <form id="add-recipes-form" onSubmit={handleSubmit(submitForm)} noValidate> 
 
+
         <Box style={{margin: "auto"}} sx={{ width: '350px' }}>
 
-            <Stepper activeStep={activeStep}>
+            {/* <Typography variant='h4' my={4}>Create a new recipe</Typography> */}
+            <Header head={'Create a new recipe'} />
+
+            <Stepper sx={{my: 4}} activeStep={activeStep}>
                 {steps.map((label, index) => {
                 const stepProps: { completed?: boolean } = {};
                 const labelProps: {
@@ -199,14 +202,16 @@ const returnIngRow = () => {
                 );
                 })}
             </Stepper>
+
+            {/* the actual form starts here */}
             
             {activeStep !== steps.length && (
                 <React.Fragment>
 
                 { activeStep === 0 && (
-                    <Grid container>
-                        <Grid  item xs={12}>
-                            <TextField label="Nazwa dania" type="text" {...register('name')} />
+                    <Grid container className="form-step-wrapper">
+                        <Grid item xs={12} sx={{mb: 3}}>
+                            <TextField label="Nazwa potrawy" type="text" {...register('name')} />
                         </Grid>
                         <Grid  item xs={12}>
                             <Autocomplete value={categories} onChange={(event, newValue) => { setCategories(newValue); }}
@@ -227,16 +232,16 @@ const returnIngRow = () => {
                 )}
 
                 { activeStep === 1 && (
-                <Grid container>
+                <Grid container className="form-step-wrapper">
 
-                    <Grid  item xs={12}>
-                        <TextField label="Porcja na..." type="text" {...register('amount')}/>
+                    <Grid item xs={12} sx={{mb: 3}}>
+                        <TextField label="Porcja..." type="text"  fullWidth placeholder="np. 'dla dwóch osób' albo 'na jeden słoik'"{...register('amount')}/>
                     </Grid>
-                    <Grid  item xs={6}>
-                        <TextField label="Czas przygotowania" type="number" {...register('prep_time')}/>
+                    <Grid  item xs={6} sx={{mb: 3}}>
+                        <TextField label="Czas przygotowania" type="tel" {...register('prep_time')}/>
                     </Grid>
                     <Grid item xs={6}>
-                        <Typography variant="h6" id="time-span">min.</Typography>
+                        <Typography variant="h6" id="time-span">minut</Typography>
                     </Grid>
 
                     <Grid  item xs={12}>
@@ -259,41 +264,43 @@ const returnIngRow = () => {
                 )}
 
                 { activeStep === 2 && (
-                    <>
+                    <div className='form-step-wrapper'>
                         {returnIngRow()}
-                    </>
+                    </div>
                 )}
 
                 { activeStep === 3 && (
-                    <Grid container>
-                        <Grid  item xs={12}>
+                    <Grid container className="form-step-wrapper">
+                        <Grid item xs={12} sx={{mb: 3}}>
                                 <FormLabel>Krótki opis:</FormLabel>
-                                <TextField fullWidth multiline={true} rows={3} {...register('description')}/>
+                                <TextField fullWidth multiline={true} placeholder='Zareklamuj danie w kilku słowach...&#10;(przepis napiszesz na następnej stronie 😅)' rows={3} sx={{mt: 1}} {...register('description')}/>
                         </Grid>
                         <Grid  item xs={12}>
                                 <FormLabel>Zdjęcie:</FormLabel>
-                                <TextField fullWidth placeholder="Wprowadź adres URL" {...register('photo')}/>
+                                <TextField fullWidth placeholder="Wprowadź adres URL" sx={{mt: 1}} {...register('photo')}/>
                         </Grid>
                     </Grid>
                 )}
 
                 { activeStep === 4 && (
-                    <Grid container>
-                        <Grid  item xs={12}>
-                                <FormLabel>Przepis:</FormLabel>
-                                <Textarea  minRows={10} maxRows={20} size="lg" defaultValue={recipeTemplate} 
-                                // onClick={() => setSetRecipeTemplate()}
-                                {...register('recipe_text')} placeholder="..." />
+                    <Grid container className="form-step-wrapper">
+                        <Grid  item xs={12} sx={{mb: 3}}>
+                                <FormLabel>Sposób przygotowania:</FormLabel>
+                                <Textarea  minRows={10} maxRows={20} size="lg" sx={{mt: 1}} 
+                                {...register('recipe_text')} placeholder="Tutaj zamieść treść przepisu!" />
                         </Grid>
+                        <Grid item xs={6}></Grid>
                         <Grid  item xs={6}>
-                            <TextField label="Podpisz się :) " type="text" {...register('author')}/>
+                            <FormLabel>Autor:</FormLabel>
+                            <TextField label="Podpisz się! 😄" type="text" 
+                            sx={{mt: 1}} {...register('author')}/>
                         </Grid>
                     </Grid>
                 )}
 
 
                 <Box sx={{ display: 'flex', flexDirection: 'row', pt: 2 }}>
-                    <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}> Back </Button>
+                    <Button color="inherit" disabled={activeStep === 0} onClick={handleBack} sx={{ mr: 1 }}> Wróć </Button>
                     <Box sx={{ flex: '1 1 auto' }} />
 
                         {activeStep + 1 === steps.length
