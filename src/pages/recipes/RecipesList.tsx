@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import RecipeCard from "./RecipeCard";
 import './RecipeList.css'
 
+import '@fontsource/roboto/400.css';
+import Header from "../../components/Header";
+
 export default function RecipesList() {
 
 
@@ -17,7 +20,7 @@ export default function RecipesList() {
 
     return(
         <div>
-            <h1>Recipes List</h1>
+            <Header head={'Recipes'} />
             <div>
                 <button><a href="/recipes/add">Add a new recipe</a></button>
             </div>
