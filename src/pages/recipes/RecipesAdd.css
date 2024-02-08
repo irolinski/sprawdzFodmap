@@ -2,3 +2,18 @@
     margin: auto;
     margin-top: 20vh;
 }
+
+.grid-element {
+    margin: 20px !important
+}
+
+#circle-icon-grid-el{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#circle-icon-grid-el > .add-ing-input,
+#circle-icon-grid-el > .remove-ing-input{
+    cursor: pointer;
+}

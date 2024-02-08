@@ -84,9 +84,9 @@ type InputTypes = {
         const [recipeTemplate, setRecipeTemplate] = useState<any>('')
 
         const setSetRecipeTemplate = () => {
-            let template = 'Składniki: \n \n'
+            let template = 'Składniki: \n \n (Po dwukropku możesz dodać ilość :) ) \n \n'
             ingredients.map((i) =>{
-                template += i + ':' + '\n'
+                template += '- ' + i + ': \n'
             })
             template += '\n \n' + 'Sposób przygotowania: \n' 
 
