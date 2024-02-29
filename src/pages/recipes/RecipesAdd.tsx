@@ -47,7 +47,6 @@ export default function Demo() {
   };
 
   const handleBack = () => {
-    // alert('This may erase the changes') // add continue / stay buttons 
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
@@ -83,7 +82,7 @@ const recipeForm = useForm<InputTypes> ({
         ratings: [],
         author: '',
         date: null, // to be hidden
-        //verified
+        verified: false
         //id
         
     }

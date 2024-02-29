@@ -8,12 +8,9 @@ type InputTypes = {
     description: string,
     recipe_text: string,
     photo: string,
-    // ratings
     author: string,
     date: Date | null, // to be hidden
     ratings: number[],
-    //verified
-    //id
     ingredient_1_name: string,
     ingredient_1_amount: string,
     ingredient_2_name: string,
@@ -44,8 +41,8 @@ type InputTypes = {
     ingredient_14_amount: string,
     ingredient_15_name: string,
     ingredient_15_amount: string,
-    
-    
+    verified: boolean,
+    id: string,
   }
   
   export default InputTypes

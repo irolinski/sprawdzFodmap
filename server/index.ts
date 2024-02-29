@@ -34,7 +34,7 @@ app.use(express.static('build'));
 
 app.get('/seed', async (req, res, next) => {
 
-    const seedQuery = fs.readFileSync('./seeds/fodmap_table.sql', { encoding: 'utf8' })
+    const seedQuery = fs.readFileSync('./seeds/recipes.sql', { encoding: 'utf8' })
     client.query(seedQuery, (err: any, res: any) => {
     console.log(err, res)
     console.log('Seeding Completed!')
@@ -54,8 +54,9 @@ app.get('/api/recipes', async(req, res, next) => {
     res.send(q.rows)
 })
 
-app.post('/recipes', jsonParser, (req: any, res, next) => {
+app.post('/recipes', jsonParser, async (req, res, next) => {
   console.log(req.body);
+  const q = await client.query('INSERT INTO recipes_db', req.body)
 })
 
 
