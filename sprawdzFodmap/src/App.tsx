@@ -1,30 +1,22 @@
 import {CircularProgress, TextField } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
-import './Diet.css'
-import { useEffect, useState } from "react";
-import DietCard from "./DietCard";
+import './App.css'
+import { useState } from "react";
+import products from '../public/db/dietDb.ts'
+import DietCard from "./Components/DietCard";
 
 export type productProp = {
     name: string,
-    sub_title: string,
+    sub_title?: string,
     fodmap: string,
-    max_use: string,
-    histamine: string,
-    notes: string,
-    key: string
+    category?: string,
+    max_use?: string,
+    histamine: any,
+    notes?: string,
+    id?: string,
 }
 
-export function Diet() {
-
-    const [products, setProducts] = useState<any[]>([]);
-
-    useEffect(() => {
-        fetch('/api/diet')
-        .then(res => res.json())
-        .then(data => setProducts(data));
-    }, []);
-
-
+export default function App() {
 
 function search(arr: Array<productProp>, q: string){
 
@@ -39,17 +31,18 @@ function search(arr: Array<productProp>, q: string){
 }
   
 
-    const [filteredData, setFilteredData] = useState(products)
+    const [filteredData, setFilteredData] = useState<productProp[]>([])
     const [showLoading, setShowLoading] = useState(false)
 
     const searchData = async (evt: React.ChangeEvent<HTMLInputElement>) => {
 
         setShowLoading(true)
 
-        let results = [...products]
+        let results: any[] = [...products]
         const query = evt.currentTarget.value;
 
         results = search(results, query);
+
 
         (query != '') ? setFilteredData(results) : setFilteredData([]);
 
@@ -67,8 +60,9 @@ function search(arr: Array<productProp>, q: string){
                     { showLoading && <CircularProgress id="loading" color="inherit" />  }
                     { !showLoading && 
                         <div>
-                            {filteredData.map((p) => {
-                                return( <DietCard name={p.name} sub_title={p.sub_title} fodmap={p.fodmap_mon} max_use={p.max_use} histamine={p.histamine} notes={p.notes} key={p.id} />
+                            {
+                            filteredData.map((p: productProp) => {
+                                return( <DietCard name={p.name} sub_title={p.sub_title} fodmap={p.fodmap} max_use={p.max_use} histamine={p.histamine} notes={p.notes} key={p.id} />
                                 )
                             })}
                         </div>

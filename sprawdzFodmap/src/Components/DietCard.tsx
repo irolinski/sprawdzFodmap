@@ -1,6 +1,6 @@
 import './DietCard.css'
 
-import { productProp } from './Diet'
+import { productProp } from '../App.tsx'
 
 export default function DietCard({ name, sub_title, fodmap, max_use, histamine, notes }: productProp) {
 
