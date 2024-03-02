@@ -1,0 +1,41 @@
+h1{
+    font-family: 'Roboto';
+}
+
+.search-input{
+    width: 550px;
+    max-width: 90vw;
+}
+
+.diet-grid{
+    margin: auto;
+    margin-top: 4rem;
+    text-align: center;
+    justify-content: center;
+    display: inline-grid;
+}
+
+#results{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    padding: 2rem;
+    max-width: 90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#card-container{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1050px;
+}
+
+#loading{
+    margin-top: 20vh;
+}
+
+.hide{
+    display: none
+}
