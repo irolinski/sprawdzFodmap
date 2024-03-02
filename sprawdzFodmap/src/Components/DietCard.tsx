@@ -1,7 +1,8 @@
 import './DietCard.css'
 
 import { productProp } from '../App.tsx'
-import { Paper } from '@mui/material'
+import { Paper, Tooltip, TooltipProps, tooltipClasses } from '@mui/material'
+
 
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
 import RemoveCircleIcon from '@mui/icons-material/RemoveCircle';
@@ -10,6 +11,20 @@ import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { amber, green, red } from '@mui/material/colors';
 
 import HitIcon from '../../public/icons/hit2.svg'
+import { styled } from '@mui/material/styles';
+import React from 'react';
+
+
+const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} arrow classes={{ popper: className }} />
+  ))(({ theme }) =>  ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: 'rgba(0,0,0,.5)',
+      color: '#fff',
+      boxShadow: theme.shadows[1],
+      fontSize: 11,
+    },
+  }));
 
 
 export default function DietCard({ name, sub_title, fodmap, max_use, histamine, notes }: productProp) {
@@ -28,48 +43,78 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                     <tr>
                         <td>
                             {fodmap === 'low' && (
-                            <div className="fodmap-div">
-                                    <CheckCircleIcon className="card-icon" sx={{ color: green[500] }} fontSize='large' />
-                                    <div className="fodmap-logo">
-                                        <span className="fmap-cat low-fmap" style={{ color: green[500] }}>Low</span> <span>FODMAP</span>
+                                <HtmlTooltip title={
+                                    <React.Fragment>
+                                        {'Produkt o niskiej zawartości fodmapów - dozwolony na diecie low FODMAP'}
+                                    </React.Fragment>
+                                }>
+                                    <div className="fodmap-div">
+                                            <CheckCircleIcon className="card-icon" sx={{ color: green[500] }} fontSize='large' />
+                                            <div className="fodmap-logo">
+                                                <span className="fmap-cat low-fmap" style={{ color: green[500] }}>Low</span> <span>FODMAP</span>
+                                            </div>
                                     </div>
-                            </div>
+                                </HtmlTooltip>
                             )}
 
                             {fodmap === 'mid' && (
-                                <div className="fodmap-div">
-                                        <RemoveCircleIcon className="card-icon" sx={{ color: amber[500] }} fontSize='large' />
-                                        <div className="fodmap-logo">
-                                            <span className="fmap-cat mid-fmap" style={{ color: amber[500] }} >Mid</span> <span>FODMAP</span> 
-                                        </div>
-                                </div>
+                                <HtmlTooltip title={
+                                    <React.Fragment>
+                                        {'Produkt o średniej zawartości fodmapów - dozwolony na diecie moderate FODMAP'}
+                                    </React.Fragment>
+                                }>
+                                    <div className="fodmap-div">
+                                            <RemoveCircleIcon className="card-icon" sx={{ color: amber[500] }} fontSize='large' />
+                                            <div className="fodmap-logo">
+                                                <span className="fmap-cat mid-fmap" style={{ color: amber[500] }} >Mid</span> <span>FODMAP</span> 
+                                            </div>
+                                    </div>
+                                </HtmlTooltip>
                             )}
 
                             {fodmap ==='high' && (
-                                <div className="fodmap-div">
-                                    <CancelIcon className="card-icon" sx={{ color: red[500] }} fontSize='large' />
-                                    <div className="fodmap-logo">
-                                            <span className="fmap-cat high-fmap" style={{ color: red[500] }} >High</span> <span>FODMAP</span>
+                                <HtmlTooltip title={
+                                    <React.Fragment>
+                                        {'Produkt o wysokiej zawartości fodmapów - niezalecany w czasie trwania diety'}
+                                    </React.Fragment>
+                                }>
+                                    <div className="fodmap-div">
+                                        <CancelIcon className="card-icon" sx={{ color: red[500] }} fontSize='large' />
+                                        <div className="fodmap-logo">
+                                                <span className="fmap-cat high-fmap" style={{ color: red[500] }} >High</span> <span>FODMAP</span>
+                                        </div>
                                     </div>
-                                </div>
+                                </HtmlTooltip>
                             )}
                         </td>
                         <td>
                             {max_use && (
-                                <div className="max-use-div">
-                                    <RestaurantIcon />
+                                <HtmlTooltip title={
+                                    <React.Fragment>
+                                        {'Maksymalna dzienna porcja tego produktu na diecie lowFodmap'}
+                                    </React.Fragment>
+                                }>
+                                    <div className="max-use-div">
+                                        <RestaurantIcon />
                                         <span className="max-use">{max_use}</span>
-                                </div>
+                                    </div>
+                                </HtmlTooltip>
                             )}
                         </td>
                         <td>
                             {histamine && (
-                                <div className="histamine-div">
-                                    <img className="hit-icon" src={HitIcon} />
-                                    { (histamine === 'low') && <span>(20%)</span> }
-                                    { (histamine === 'mid') && <span className="his-mid-span">(20-60%)</span> }
-                                    { (histamine === 'high') && <span>(60%)</span> }
-                                </div>
+                                    <HtmlTooltip title={
+                                        <React.Fragment>
+                                            { histamine == '>60%'  &&  <span>Produkt <b>zakazany w większości diet</b> stosowanych przy Nietolerancji Histaminy</span> }
+                                            { histamine == '20-60%' && <span>Produkt <b>zakazany w istotnej części diet</b> stosowanych przy Nietolerancji Histaminy</span> }
+                                            { histamine == '20%' && <span>Produkt <b>zakazany w niektórych dietach</b> stosowanych przy Nietolerancji Histaminy</span> }
+                                        </React.Fragment>
+                                    }>
+                                        <div className="histamine-div">
+                                                <img className="hit-icon" src={HitIcon} />
+                                                <span>{histamine}</span>
+                                        </div>
+                                    </HtmlTooltip>
                             )}
                         </td>
                     </tr>

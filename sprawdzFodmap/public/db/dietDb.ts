@@ -238,7 +238,7 @@ export default [
       "name": "Czekolada mleczna",
       "fodmap": "high",
       "category": "dodatki",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_038"
     },
     {
@@ -273,7 +273,7 @@ export default [
       "sub_title": "Jajka",
       "fodmap": "low",
       "category": "mieso",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_043"
     },
     {
@@ -281,7 +281,7 @@ export default [
       "sub_title": "Tuńczyk, Łosoś",
       "fodmap": "high",
       "category": "mieso",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_044"
     },
     {
@@ -289,7 +289,7 @@ export default [
       "sub_title": "Łosoś, Pstrąg, Halibut, Miętus, Karp, Mintaj, Dorsz, Tuńczyk",
       "fodmap": "low",
       "category": "mieso",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_045"
     },
     {
@@ -309,7 +309,7 @@ export default [
       "sub_title": "Mule, Krewetki, Ostrygi, Raki",
       "fodmap": "low",
       "category": "mieso",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_048"
     },
     {
@@ -317,7 +317,7 @@ export default [
       "sub_title": "(i inne mięsa wysokoprzetworzone)",
       "fodmap": "high",
       "category": "mieso",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_049"
     },
     {
@@ -368,7 +368,7 @@ export default [
       "sub_title": "(z wyłączeniem pleśniowych)",
       "fodmap": "low",
       "category": "nabial",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_057"
     },
     {
@@ -412,14 +412,14 @@ export default [
       "name": "Mleko",
       "fodmap": "high",
       "category": "nabial",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_064"
     },
     {
       "name": "Mleko bez laktozy",
       "fodmap": "mid",
       "category": "nabial",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_065"
     },
     {
@@ -578,7 +578,7 @@ export default [
       "name": "Piwo",
       "fodmap": "high",
       "category": "napoje",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_089"
     },
     {
@@ -616,28 +616,28 @@ export default [
       "name": "Wino czerwone",
       "fodmap": "low",
       "category": "napoje",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_095"
     },
     {
       "name": "Wino musujące",
       "fodmap": "high",
       "category": "napoje",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_096"
     },
     {
       "name": "Wino, deserowe",
       "fodmap": "high",
       "category": "napoje",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_097"
     },
     {
       "name": "Wino słodkie",
       "fodmap": "high",
       "category": "napoje",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_098"
     },
     {
@@ -657,7 +657,7 @@ export default [
       "fodmap": "mid",
       "max_use": "12g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_101"
     },
     {
@@ -665,7 +665,7 @@ export default [
       "sub_title": "Nerkowce",
       "fodmap": "high",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_102"
     },
     {
@@ -673,7 +673,7 @@ export default [
       "fodmap": "mid",
       "max_use": "168g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_103"
     },
     {
@@ -682,7 +682,7 @@ export default [
       "fodmap": "mid",
       "max_use": "84g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_104"
     },
     {
@@ -690,14 +690,14 @@ export default [
       "fodmap": "mid",
       "max_use": "15g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_105"
     },
     {
       "name": "Oczechy makadamia",
       "fodmap": "low",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_106"
     },
     {
@@ -705,7 +705,7 @@ export default [
       "fodmap": "mid",
       "max_use": "40g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_107"
     },
     {
@@ -713,7 +713,7 @@ export default [
       "sub_title": "Orzeszki arachidowe",
       "fodmap": "low",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_108"
     },
     {
@@ -721,7 +721,7 @@ export default [
       "fodmap": "mid",
       "max_use": "20g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_109"
     },
     {
@@ -729,14 +729,14 @@ export default [
       "fodmap": "mid",
       "max_use": "14g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_110"
     },
     {
       "name": "Pistacje",
       "fodmap": "high",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_111"
     },
     {
@@ -778,7 +778,7 @@ export default [
       "fodmap": "mid",
       "max_use": "30g",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_117"
     },
     {
@@ -791,14 +791,14 @@ export default [
       "name": "Kotlet z fasoli",
       "fodmap": "high",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_119"
     },
     {
       "name": "Quorn",
       "fodmap": "low",
       "category": "orzechy",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_120"
     },
     {
@@ -837,14 +837,14 @@ export default [
       "fodmap": "mid",
       "max_use": "20g",
       "category": "owoce",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_126"
     },
     {
       "name": "Banan",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_127"
     },
     {
@@ -896,7 +896,7 @@ export default [
       "name": "Klementynki",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_135"
     },
     {
@@ -961,21 +961,21 @@ export default [
       "fodmap": "mid",
       "max_use": "150g",
       "category": "owoce",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_147"
     },
     {
       "name": "Cytryna",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_148"
     },
     {
       "name": "Limonka",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_149"
     },
     {
@@ -988,7 +988,7 @@ export default [
       "name": "Mandarynka",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_151"
     },
     {
@@ -1014,7 +1014,7 @@ export default [
       "name": "Pomarańcze",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_155"
     },
     {
@@ -1022,7 +1022,7 @@ export default [
       "fodmap": "mid",
       "max_use": "23g",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_156"
     },
     {
@@ -1068,7 +1068,7 @@ export default [
       "name": "Śliwka",
       "fodmap": "high",
       "category": "owoce",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_163"
     },
     {
@@ -1108,7 +1108,7 @@ export default [
       "name": "Truskawka",
       "fodmap": "low",
       "category": "owoce",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_169"
     },
     {
@@ -1149,7 +1149,7 @@ export default [
       "fodmap": "mid",
       "max_use": "20g",
       "category": "owoce",
-      "histamine": "mid",
+      "histamine": "20-60%",
       "id": "f_175"
     },
     {
@@ -1332,7 +1332,7 @@ export default [
       "sub_title": "(z puszki)",
       "fodmap": "low",
       "category": "straczki",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_203",
       "notes": "W celu minimalizacji  objawów, wskazuje się ograniczenie spożycia produktów strączkowych."
     },
@@ -1342,7 +1342,7 @@ export default [
       "fodmap": "mid",
       "max_use": "23g",
       "category": "straczki",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_204",
       "notes": "W celu minimalizacji  objawów, wskazuje się ograniczenie spożycia produktów strączkowych."
     },
@@ -1384,7 +1384,7 @@ export default [
       "name": "Soja gotowana",
       "fodmap": "high",
       "category": "straczki",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_209",
       "notes": "W celu minimalizacji  objawów, wskazuje się ograniczenie spożycia produktów strączkowych."
     },
@@ -1445,14 +1445,14 @@ export default [
       "name": "Pieczarki",
       "fodmap": "high",
       "category": "warzywa",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_218"
     },
     {
       "name": "Grzyby Shiitake",
       "fodmap": "high",
       "category": "warzywa",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_220"
     },
     {
@@ -1548,7 +1548,7 @@ export default [
       "fodmap": "mid",
       "max_use": "38g",
       "category": "warzywa",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_234"
     },
     {
@@ -1573,17 +1573,17 @@ export default [
     },
     {
       "name": "Pomidorki cherry",
-      "fodmap": "low",
+      "fodmap": "mid",
       "max_use": "68g",
       "category": "warzywa",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_238"
     },
     {
       "name": "Pomidory",
       "fodmap": "low",
       "category": "warzywa",
-      "histamine": "high",
+      "histamine": ">60%",
       "id": "f_239"
     },
     {
@@ -1645,7 +1645,7 @@ export default [
       "fodmap": "mid",
       "max_use": "110g",
       "category": "warzywa",
-      "histamine": "low",
+      "histamine": "20%",
       "id": "f_248"
     },
     {
