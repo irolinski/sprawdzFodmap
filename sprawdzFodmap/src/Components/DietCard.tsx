@@ -15,7 +15,18 @@ import { styled } from '@mui/material/styles';
 import React from 'react';
 
 
-const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
+const ElementTip = styled(({ className, ...props }: TooltipProps) => (
+    <Tooltip {...props} arrow classes={{ popper: className }} />
+  ))(({ theme }) =>  ({
+    [`& .${tooltipClasses.tooltip}`]: {
+      backgroundColor: 'rgba(0,0,0,.5)',
+      color: '#fff',
+      boxShadow: theme.shadows[1],
+      fontSize: 12,
+    },
+  }));
+
+  const InfoTip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
   ))(({ theme }) =>  ({
     [`& .${tooltipClasses.tooltip}`]: {
@@ -33,7 +44,18 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
 
     <Paper className='diet-card'>
         <header>
-            <h3 className="title">{name}</h3> {notes && (<div className="info-icon">i</div> )} 
+            <h3 className="title">{name}</h3> 
+                {notes && (
+                    <InfoTip title={
+                        <React.Fragment>
+                            {<span>
+                                {notes}
+                            </span>}
+                        </React.Fragment>
+                    }>
+                        <div className="info-icon">i</div> 
+                    </InfoTip>
+                )} 
                 <span className="sub-title">{sub_title}</span>
         </header>
         <main>
@@ -43,9 +65,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                     <tr>
                         <td>
                             {fodmap === 'low' && (
-                                <HtmlTooltip title={
+                                <ElementTip title={
                                     <React.Fragment>
-                                        {'Produkt o niskiej zawartości fodmapów - dozwolony na diecie low FODMAP'}
+                                        {<span>Produkt o <b style={{ color: green[500] }}>niskiej zawartości</b> FODMAPów - dozwolony na diecie low FODMAP</span>}
                                     </React.Fragment>
                                 }>
                                     <div className="fodmap-div">
@@ -54,13 +76,13 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                                                 <span className="fmap-cat low-fmap" style={{ color: green[500] }}>Low</span> <span>FODMAP</span>
                                             </div>
                                     </div>
-                                </HtmlTooltip>
+                                </ElementTip>
                             )}
 
                             {fodmap === 'mid' && (
-                                <HtmlTooltip title={
+                                <ElementTip title={
                                     <React.Fragment>
-                                        {'Produkt o średniej zawartości fodmapów - dozwolony na diecie moderate FODMAP'}
+                                        {<span>Produkt o <b style={{ color: amber[500] }}>średniej zawartości</b> FODMAPów  - dozwolony na diecie moderate FODMAP</span>}
                                     </React.Fragment>
                                 }>
                                     <div className="fodmap-div">
@@ -69,13 +91,13 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                                                 <span className="fmap-cat mid-fmap" style={{ color: amber[500] }} >Mid</span> <span>FODMAP</span> 
                                             </div>
                                     </div>
-                                </HtmlTooltip>
+                                </ElementTip>
                             )}
 
                             {fodmap ==='high' && (
-                                <HtmlTooltip title={
+                                <ElementTip title={
                                     <React.Fragment>
-                                        {'Produkt o wysokiej zawartości fodmapów - niezalecany w czasie trwania diety'}
+                                        {<span>Produkt o <b style={{ color: red[500] }}>wysokiej zawartości</b> FODMAPów - niewskazany w czasie trwania diety</span>}
                                     </React.Fragment>
                                 }>
                                     <div className="fodmap-div">
@@ -84,26 +106,26 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                                                 <span className="fmap-cat high-fmap" style={{ color: red[500] }} >High</span> <span>FODMAP</span>
                                         </div>
                                     </div>
-                                </HtmlTooltip>
+                                </ElementTip>
                             )}
                         </td>
                         <td>
                             {max_use && (
-                                <HtmlTooltip title={
+                                <ElementTip title={
                                     <React.Fragment>
                                         {'Maksymalna dzienna porcja tego produktu na diecie lowFodmap'}
                                     </React.Fragment>
                                 }>
                                     <div className="max-use-div">
-                                        <RestaurantIcon />
+                                        <RestaurantIcon color="action"/>
                                         <span className="max-use">{max_use}</span>
                                     </div>
-                                </HtmlTooltip>
+                                </ElementTip>
                             )}
                         </td>
                         <td>
                             {histamine && (
-                                    <HtmlTooltip title={
+                                    <ElementTip title={
                                         <React.Fragment>
                                             { histamine == '>60%'  &&  <span>Produkt <b>zakazany w większości diet</b> stosowanych przy Nietolerancji Histaminy</span> }
                                             { histamine == '20-60%' && <span>Produkt <b>zakazany w istotnej części diet</b> stosowanych przy Nietolerancji Histaminy</span> }
@@ -112,9 +134,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                                     }>
                                         <div className="histamine-div">
                                                 <img className="hit-icon" src={HitIcon} />
-                                                <span>{histamine}</span>
+                                                { histamine !== '20-60%' ? <span className="histamine-non-mid-nums">{histamine}</span> : <span className="histamine-mid-nums">{histamine}</span> }
                                         </div>
-                                    </HtmlTooltip>
+                                    </ElementTip>
                             )}
                         </td>
                     </tr>

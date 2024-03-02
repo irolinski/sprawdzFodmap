@@ -106,7 +106,8 @@ export default [
       "id": "f_016"
     },
     {
-      "name": "Majonez \"sklepowy\"",
+      "name": "Majonez",
+      "sub_title": "(sklepowy)",
       "fodmap": "high",
       "category": "dodatki",
       "id": "f_017"
@@ -364,7 +365,7 @@ export default [
       "id": "f_056"
     },
     {
-      "name": "sery Żółte i dojrzewające",
+      "name": "sery żółte i/lub dojrzewające",
       "sub_title": "(z wyłączeniem pleśniowych)",
       "fodmap": "low",
       "category": "nabial",
@@ -394,7 +395,7 @@ export default [
       "fodmap": "high",
       "category": "nabial",
       "id": "f_061",
-      "notes": "Dozwolone sorbety/lody z produktów low FODMAP"
+      "notes": "Dozwolone sorbety/lody zrobione z produktów low FODMAP"
     },
     {
       "name": "Kefir",
@@ -522,10 +523,10 @@ export default [
       "id": "f_080"
     },
     {
-      "name": "Herbata czarna",
-      "sub_title": "(dozwolona tylko lekka)",
+      "name": "Herbata czarna, lekka",
       "fodmap": "low",
       "category": "napoje",
+      "notes": "Zaleca się unikać mocnego parzenia",
       "id": "f_081"
     },
     {
@@ -2191,6 +2192,13 @@ export default [
       "max_use": "44g",
       "category": "zboza",
       "id": "f_333"
+    },
+    {
+      "name": "Masło orzechowe",
+      "fodmap": "mid",
+      "max_use": "50g",
+      "category": "orzechy",
+      "id": "f_334"
     }
   ]
 

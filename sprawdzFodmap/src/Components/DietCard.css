@@ -104,12 +104,16 @@ min-width: 6em;
 .fodmap-logo,
 .histamine-div{
     padding: 0 0 0 0.3em;
-    font-size: 1.5em
+    font-size: 1.5em;
 }
 
-.histamine-div > span{
+.histamine-non-mid-nums{
     transform: translateY(5px);
 
+}
+
+.histamine-mid-nums{
+    transform: translateY(-5px);
 }
 
 .his-mid-span{
@@ -119,6 +123,7 @@ min-width: 6em;
 
 .max-use-div{
     transform: translateX(10px);
+    align-items: center;
 }
 
 .max-use{
