@@ -1252,7 +1252,7 @@ export default [
       "id": "f_191"
     },
     {
-      "name": "dżemy kupne",
+      "name": "Dżemy kupne",
       "fodmap": "high",
       "category": "owoce",
       "id": "f_192"

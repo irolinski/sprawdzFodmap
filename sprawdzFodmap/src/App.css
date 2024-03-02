@@ -25,6 +25,13 @@ h1{
     justify-content: space-around;
 }
 
+#card-container{
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1050px;
+}
+
 #loading{
     margin-top: 20vh;
 }

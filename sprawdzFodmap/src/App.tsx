@@ -1,5 +1,5 @@
 import {CircularProgress, TextField } from "@mui/material";
-import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
+import Grid from '@mui/material/Unstable_Grid2'; 
 import './App.css'
 import { useState } from "react";
 import products from '../public/db/dietDb.ts'
@@ -59,7 +59,7 @@ function search(arr: Array<productProp>, q: string){
             <Grid xs={12} className="diet-grid">
                     { showLoading && <CircularProgress id="loading" color="inherit" />  }
                     { !showLoading && 
-                        <div>
+                        <div id="card-container">
                             {
                             filteredData.map((p: productProp) => {
                                 return( <DietCard name={p.name} sub_title={p.sub_title} fodmap={p.fodmap} max_use={p.max_use} histamine={p.histamine} notes={p.notes} key={p.id} />
