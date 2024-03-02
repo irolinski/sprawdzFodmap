@@ -77,7 +77,7 @@ main{
 }
 
 .card-icon{
-    transform: translate(-10px, -14px);
+    transform: translate(-13px, -14px);
     scale: 1.4;
 }
 
@@ -104,7 +104,7 @@ min-width: 6em;
 .fodmap-logo,
 .histamine-div{
     padding: 0 0 0 0.3em;
-    font-size: 1.5em;
+    font-size: 1.3em; /* wcześniej 1.5em */
 }
 
 .histamine-non-mid-nums{

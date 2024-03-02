@@ -1,0 +1,17 @@
+
+.MuiAppBar-root{
+    display: inline-table !important;
+}
+
+.page-brand{
+    font-size: 1.3em !important;
+    color: rgb(102, 102, 102) !important;
+    transition: color 0.5s;
+    cursor: pointer;
+    text-decoration: none !important;
+}
+
+.page-brand:hover{
+    color: rgb(146, 146, 146);
+}
+

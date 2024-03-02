@@ -1,6 +1,6 @@
 import './DietCard.css'
 
-import { productProp } from '../App.tsx'
+import { ProductProp } from '../Pages/Home.tsx'
 import { Paper, Tooltip, TooltipProps, tooltipClasses } from '@mui/material'
 
 
@@ -38,7 +38,7 @@ const ElementTip = styled(({ className, ...props }: TooltipProps) => (
   }));
 
 
-export default function DietCard({ name, sub_title, fodmap, max_use, histamine, notes }: productProp) {
+export default function DietCard({ name, sub_title, fodmap, max_use, histamine, notes }: ProductProp) {
 
     return(
 
