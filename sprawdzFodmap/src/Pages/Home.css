@@ -32,7 +32,8 @@
     justify-content: space-around;
     display: flex;
     flex-wrap: wrap;
-    max-width: 1050px;
+    max-width: 1135px; /* wcześniej 1050 */
+
 }
 
 #loading{

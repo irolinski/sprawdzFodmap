@@ -1628,21 +1628,22 @@ export default [
       "id": "f_245"
     },
     {
-      "name": "Ogórki konserwowe",
-      "sub_title": "Ogórki kiszone",
+      "name": "Ogórki kiszone",
+      "sub_title": "Ogórki konserwowe; z cukrem i czosnkiem",
       "fodmap": "high",
       "category": "warzywa",
       "id": "f_246"
     },
     {
-      "name": "Ogórki konserwowe bez cukru i czosnku",
-      "sub_title": "Ogórki kiszone bez cukru i czosnku",
+      "name": "Ogórki konserwowe",
+      "sub_title": "Ogórki kiszone; bez cukru i czosnku",
       "fodmap": "low",
       "category": "warzywa",
       "id": "f_247"
     },
     {
-      "name": "Pieczarki z puszki",
+      "name": "Pieczarki",
+      "sub_title": "(z puszki)",
       "fodmap": "mid",
       "max_use": "110g",
       "category": "warzywa",
@@ -1650,14 +1651,15 @@ export default [
       "id": "f_248"
     },
     {
-      "name": "Grzyby Shiitake, suszone",
+      "name": "Grzyby Shiitake",
+      "sub_title": "suszone",
       "fodmap": "mid",
       "max_use": "7g",
       "category": "warzywa",
       "id": "f_249"
     },
     {
-      "name": "Oliwki, zielone, bez pestek",
+      "name": "Oliwki, zielone",
       "fodmap": "low",
       "category": "warzywa",
       "id": "f_250"
@@ -1669,7 +1671,8 @@ export default [
       "id": "f_251"
     },
     {
-      "name": "Kluski ziemniaczane, pyzy",
+      "name": "Kluski ziemniaczane",
+      "sub_title": "pyzy",
       "fodmap": "low",
       "category": "warzywa",
       "id": "f_252"
@@ -1690,12 +1693,14 @@ export default [
     {
       "name": "Pomidor, z puszki",
       "fodmap": "high",
+      "histamine": "60",
       "category": "warzywa",
       "id": "f_255"
     },
     {
-      "name": "Pomidor, suszony",
+      "name": "Pomidor suszony",
       "fodmap": "mid",
+      "histamine": "60",
       "max_use": "8g",
       "category": "warzywa",
       "id": "f_256"
@@ -1726,7 +1731,8 @@ export default [
       "id": "f_260"
     },
     {
-      "name": "Serca karczocha, z puszki",
+      "name": "Serca karczocha",
+      "sub_title": "(z puszki)",
       "fodmap": "mid",
       "max_use": "28g",
       "category": "warzywa",
@@ -1746,7 +1752,8 @@ export default [
       "id": "f_263"
     },
     {
-      "name": "Pędy bambusa,  świeżę",
+      "name": "Pędy bambusa",
+      "sub_title": "(świeże)",
       "fodmap": "low",
       "category": "warzywa",
       "id": "f_264"
@@ -1992,7 +1999,7 @@ export default [
     },
     {
       "name": "Płatki owsiane",
-      "sub_title": "(nie błyskawiczne)",
+      "sub_title": "(nie błyskawiczne!)",
       "fodmap": "mid",
       "max_use": "60g",
       "category": "zboza",
