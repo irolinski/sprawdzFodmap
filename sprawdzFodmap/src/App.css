@@ -1,10 +1,18 @@
+body{
+    overflow-x: hidden;
+}
+
+.MuiBox-root{
+    overflow: hidden !important;
+}
 
 .MuiAppBar-root{
-    display: inline-table !important;
+    display: inline-block !important;
 }
 
 .page-brand{
-    font-size: 1.3em !important;
+    margin-right: 1.1em !important;
+    font-size: 1.1em !important;
     color: rgb(102, 102, 102) !important;
     transition: color 0.5s;
     cursor: pointer;
@@ -15,3 +23,18 @@
     color: rgb(146, 146, 146);
 }
 
+
+.nav-buttons-div{
+    right: -5px;
+    position: absolute;
+}
+
+@media (min-width: 500px) {
+    .page-brand{
+        font-size: 1.3em !important;
+    }
+
+    .nav-buttons-div{
+        right: 20px;
+    }
+}

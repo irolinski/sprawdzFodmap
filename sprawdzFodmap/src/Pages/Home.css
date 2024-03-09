@@ -4,7 +4,6 @@
 }
 
 
-
 .search-input{
     width: 550px;
     max-width: 90vw;
@@ -34,6 +33,10 @@
     flex-wrap: wrap;
     max-width: 1135px; /* wcześniej 1050 */
 
+}
+
+.card-row > table{
+    padding: 0 0 1em 1em;
 }
 
 #loading{

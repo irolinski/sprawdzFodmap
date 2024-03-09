@@ -12,7 +12,7 @@ export type ProductProp = {
     fodmap: string,
     category?: string,
     max_use?: string,
-    histamine: any,
+    histamine?: string,
     notes?: string,
     id?: string
 }
@@ -59,7 +59,7 @@ function search(arr: Array<ProductProp>, q: string){
 
     return(
         <>
-            <Navbar link_1={{name: 'Tabele', adress: '/tabele'}} link_2={{name: 'Info', adress: '/info'}} />
+            <Navbar />
             <Grid container spacing={2} className="home-grid">
                 <Grid xs={12} md={10} className="diet-grid">
                     <TextField className="search-input" label="Wprowadź nazwę produktu" variant="standard" onChange={searchData} />

@@ -9,7 +9,7 @@
     color: black;
     /* box-shadow: rgba(0, 0, 0, 0.15) 1px 3px 3px 2px; */
     border-radius: 7px;
-    scale: 0.85;
+    scale: 0.8;
 }
 
 header{
@@ -159,3 +159,9 @@ color: #B0744A
 color: #983F4A
 }
 
+
+@media (min-width: 500px) {
+    .diet-card{
+        scale: 0.85;
+    }
+}
