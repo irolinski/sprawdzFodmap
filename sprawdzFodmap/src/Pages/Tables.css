@@ -2,6 +2,29 @@ html {
     scroll-behavior: smooth;
   }
 
+
+  .MuiDrawer-docked{
+    width: 0px !important; /* this fixes the drawer taking up space in the grid even when it's closed */
+  }
+
+  .drawer-button{
+    position: fixed !important;
+    color: black !important;
+    background: #e7e7e7e1 !important;
+    padding: 10px;
+    /* border-radius: 0% !important; */
+    font-size: 2em !important;
+    right: 5px;
+    bottom: 25px;
+    /* right: -25px;
+    top: 50%; */
+  }
+
+  .drawer-button > svg{
+    font-size: 1.2em;
+
+  }
+
   .table-accordion{
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2) !important;
   }
@@ -11,9 +34,29 @@ html {
     white-space: nowrap;
     width: 75%;
     margin: auto;
-    margin-top: 6em;
+    padding: 1em;
     color: brown;
+    width: 90px;
+    left: 8%;
+    top: 25%;
+    white-space: normal;
+    overflow: hidden;
+    /* position: fixed; */
 }
+
+
+.button-scroll-widescreen{
+    position: fixed;
+}
+
+.button-scroll > a {
+    white-space: nowrap;
+}
+
+.button-scroll > a:last-of-type{
+    white-space: normal  !important;
+}
+
 
 
 .table-grid{
@@ -21,6 +64,7 @@ html {
    right: 25%; */
    margin: auto;
    margin-top: 6em;
+   margin-left: 0;
 }
 
 .category-list{
@@ -47,20 +91,29 @@ table{
         white-space: normal;
         overflow: hidden;
         position: fixed;
+        margin-top: 6em;
+
     }
 
-    .button-div-break{
+    .button-div-break,
+    .drawer-button{
+        display: none !important;
+    }
+}
+
+@media (max-width: 905px) {
+    .button-scroll-widescreen{
         display: none;
     }
 }
 
 @media(min-width: 580px){
-    .button-scroll{
+    /* .button-scroll{
     position: relative;
     left: 12.5%;
     }
+} */
 }
-
 
 @media (max-width: 500px){
     table th,
