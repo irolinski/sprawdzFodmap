@@ -2,32 +2,46 @@ html {
     scroll-behavior: smooth;
   }
 
+.table-accordion{
+    position: initial !important;
+}
 
-  .MuiDrawer-docked{
+.accordion-list > li{
+    margin: 0.5em !important;
+}
+
+.sources-header{
+    margin-bottom: 0;
+}
+
+.source-list a {
+    text-decoration: none;
+    color: black;
+}
+
+.MuiDrawer-docked{
     width: 0px !important; /* this fixes the drawer taking up space in the grid even when it's closed */
   }
 
-  .drawer-button{
+.drawer-button{
     position: fixed !important;
     color: black !important;
     background: #e7e7e7e1 !important;
     padding: 10px;
-    /* border-radius: 0% !important; */
     font-size: 2em !important;
     right: 5px;
     bottom: 25px;
-    /* right: -25px;
-    top: 50%; */
-  }
+ 
+}
 
-  .drawer-button > svg{
+.drawer-button > svg{
     font-size: 1.2em;
 
-  }
+}
 
-  .table-accordion{
+.table-accordion{
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2) !important;
-  }
+}
 
 .button-scroll{
     overflow: auto;
@@ -60,8 +74,7 @@ html {
 
 
 .table-grid{
-    /* position: absolute;
-   right: 25%; */
+   right: 25%; 
    margin: auto;
    margin-top: 6em;
    margin-left: 0;
@@ -69,17 +82,46 @@ html {
 
 .category-list{
     margin: auto;
-    /* display: none !important; */
 }
 
 .table-div{
     margin-top: 8em;
 }
 
-table{
+.table-page table{
     table-layout: fixed;
     padding: 1.5em;
 
+}
+
+.table-page th{
+    font-size: 1rem !important; 
+    background-color: #00000003;
+
+}
+
+.fodmap-table-div{
+    padding: 0.7em;
+    text-align: center;
+    font-weight: 600;
+}
+
+.table-page td{
+    background-color: #c9c9c92e;
+
+}
+
+
+.low-fodmap-table-cell{
+    background-color: #4CAF50 !important;
+}
+
+.mid-fodmap-table-cell{
+    background-color: #FFC107 !important;
+}
+
+.high-fodmap-table-cell{
+    background-color: #F54335 !important;
 }
 
 @media (min-width: 905px) {
@@ -107,17 +149,9 @@ table{
     }
 }
 
-@media(min-width: 580px){
-    /* .button-scroll{
-    position: relative;
-    left: 12.5%;
-    }
-} */
-}
-
 @media (max-width: 500px){
-    table th,
-    table td{
+    .table-page table th,
+    .table-page table td{
         font-size: 0.7em !important;
     }
     

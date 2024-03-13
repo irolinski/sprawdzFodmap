@@ -1,6 +1,6 @@
 import './DietCard.css'
 
-import { ProductProp } from '../Pages/Home.tsx'
+import { ProductProp } from '../../Pages/Home.tsx'
 import { Paper, Tooltip, TooltipProps, tooltipClasses } from '@mui/material'
 
 
@@ -10,7 +10,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
 import { amber, green, red } from '@mui/material/colors';
 
-import HitIcon from '../../public/icons/hit2.svg'
+import HitIcon from '/public/icons/hit2.svg'
 import { styled } from '@mui/material/styles';
 import React from 'react';
 

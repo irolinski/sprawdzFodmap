@@ -3,7 +3,7 @@ import Grid from '@mui/material/Unstable_Grid2'; // Grid version 2
 import './Home.css';
 import { useState } from "react";
 import products from '../../public/db/dietDb.ts'
-import DietCard from "../Components/DietCard";
+import DietCard from "../Components/Main/DietCard.tsx";
 import Navbar from '../Components/Nav.tsx'
 
 export type ProductProp = {
@@ -58,7 +58,7 @@ function search(arr: Array<ProductProp>, q: string){
     }    
 
     return(
-        <>
+        <div className="main-page">
             <Navbar />
             <Grid container spacing={2} className="home-grid">
                 <Grid xs={12} md={10} className="diet-grid">
@@ -77,6 +77,6 @@ function search(arr: Array<ProductProp>, q: string){
                         }
                 </Grid>
             </Grid>
-        </>
+        </ div>
     )
 }   

@@ -365,7 +365,7 @@ export default [
       "id": "f_056"
     },
     {
-      "name": "sery żółte i/lub dojrzewające",
+      "name": "Sery żółte i/lub dojrzewające",
       "sub_title": "(z wyłączeniem pleśniowych)",
       "fodmap": "low",
       "category": "Nabiał",

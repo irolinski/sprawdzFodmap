@@ -3,6 +3,9 @@
     margin-top: 100px !important;
 }
 
+.main-page .drawer-button{
+    display: none;
+}
 
 .search-input{
     width: 550px;

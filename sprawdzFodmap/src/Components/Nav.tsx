@@ -1,21 +1,19 @@
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-// import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { grey } from '@mui/material/colors';
-import { Link, Menu, MenuItem, Fade } from '@mui/material';
+import { Link, Menu, MenuItem, Fade, IconButton, Divider } from '@mui/material';
 
 import { useState } from 'react';
 
-// type LinkProps = {
-//  link_1: NavLink;
-//  link_2: NavLink;
-// }
+import FoodBankIcon from '@mui/icons-material/FoodBank';
 
 
 
-export default function ButtonAppBar() {
+
+export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
+
 
   const [anchorEl1, setAnchorEl1] = useState<null | HTMLElement>(null);
   const openDropdown1 = Boolean(anchorEl1);
@@ -43,6 +41,15 @@ export default function ButtonAppBar() {
           <Link className="page-brand" font-weight="800" href="/">
                 SprawdźFODMAP
           </Link>
+          <IconButton className="drawer-button"
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            >
+                <FoodBankIcon />
+            </IconButton>
           <div className="nav-buttons-div">
               <Button
                 id="fade-button"
@@ -52,7 +59,7 @@ export default function ButtonAppBar() {
                 style={{color: grey[500] }}
                 onClick={handleClickDropdown1}
               >
-                Tabele
+                Diety
               </Button>
               <Menu
                 id="fade-menu"
@@ -64,8 +71,10 @@ export default function ButtonAppBar() {
                 onClose={handleCloseDropdown1}
                 TransitionComponent={Fade}
               >
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/fodmap'>Fodmap</MenuItem>
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/hit'>Nietolerancja Histaminy</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/fodmap'>d. Low FODMAP</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/hit'>d. Przeciwhistaminowa</MenuItem>
+                <Divider />
+                <MenuItem onClick={handleClickDropdown1} component='a' href='/'>Szukaj </MenuItem>
               </Menu>
               <Button
                 id="fade-button"
@@ -87,9 +96,7 @@ export default function ButtonAppBar() {
                 onClose={handleCloseDropdown2}
                 TransitionComponent={Fade}
               >
-                <MenuItem onClick={handleCloseDropdown2} component='a' href='/info/fodmap'>Dieta FODMAP</MenuItem>
-                <MenuItem onClick={handleCloseDropdown2} component='a' href='/info/hit'>Nietolerancja histaminy</MenuItem>
-
+                <MenuItem onClick={handleCloseDropdown2} component='a' href='/info/o-nas'>O nas</MenuItem>
               </Menu>
           </div>
         </Toolbar>

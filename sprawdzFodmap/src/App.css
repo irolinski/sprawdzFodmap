@@ -10,6 +10,10 @@ body{
     display: inline-block !important;
 }
 
+.MuiToolbar-root{
+    position: static !important; /* fix for the bug that makes the nav lift after clicking any button */
+}
+
 .page-brand{
     margin-right: 1.1em !important;
     font-size: 1.1em !important;
