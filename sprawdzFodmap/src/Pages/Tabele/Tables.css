@@ -31,12 +31,18 @@ html {
     font-size: 2em !important;
     right: 5px;
     bottom: 25px;
+
+    display: none !important;
  
 }
 
 .drawer-button > svg{
     font-size: 1.2em;
 
+}
+
+.table-page .drawer-button{
+    display: block !important;
 }
 
 .table-accordion{

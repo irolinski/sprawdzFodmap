@@ -1,0 +1,63 @@
+
+
+.about-page .MuiGrid-root{
+    margin: 0;
+    width: 100%;
+}
+
+.about-page .diet-grid{
+  
+    justify-content: unset;
+    max-width: 100%;
+    margin: auto;
+
+}
+
+.css-ohwg9z{
+    top: 8%;
+}
+
+
+.info-slide{
+    /* background-color: rgba(203, 202, 202, 0.592) !important; */
+    margin: auto;
+    /* padding: 2em 2em 0 2em; */
+    padding-top: 1em;
+    border-radius: 20px;
+    width: 90%;
+    height: 100%;
+    max-width: 480px;
+}
+
+.info-slide h2{
+    margin-bottom: 1em;
+
+    font-weight: 600;
+    font-size: 1.6em;
+}
+
+.slide-text{
+    list-style: none;
+    text-align: left;
+    font-size: 1.2em;
+    position: relative;
+    top: 40px;
+}
+
+.about-us-text{
+    list-style: circle !important;
+}
+
+.slide-text li{
+    margin: 1em;
+
+
+}
+
+.slide-text a{
+    word-wrap: break-word;
+}
+
+.slide-image{
+    max-width: 200px;
+}
