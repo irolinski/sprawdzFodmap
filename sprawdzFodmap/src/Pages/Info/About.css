@@ -22,16 +22,14 @@
     /* background-color: rgba(203, 202, 202, 0.592) !important; */
     margin: auto;
     /* padding: 2em 2em 0 2em; */
-    padding-top: 1em;
     border-radius: 20px;
     width: 90%;
     height: 100%;
     max-width: 480px;
+    padding-bottom: 2em;
 }
 
 .info-slide h2{
-    margin-bottom: 1em;
-
     font-weight: 600;
     font-size: 1.6em;
 }
@@ -39,19 +37,26 @@
 .slide-text{
     list-style: none;
     text-align: left;
-    font-size: 1.2em;
+    /* font-size: 1.2em; */
+    font-size: 1.1em;
     position: relative;
-    top: 40px;
+    /* top: 40px; */
+    padding: 0;
 }
 
-.about-us-text{
+/* .about-us-text{
     list-style: circle !important;
-}
+} */
 
 .slide-text li{
     margin: 1em;
 
 
+}
+
+.li-indent{
+    padding-left: 1.9em;
+    text-indent: -2em;
 }
 
 .slide-text a{
@@ -60,4 +65,23 @@
 
 .slide-image{
     max-width: 200px;
+}
+
+.email-link{
+    font-size: 0.9em;
+    word-wrap: normal !important;
+    color: black;
+}
+
+.lottie{
+    margin: auto;
+    margin-top: 2em;
+}
+
+
+@media (min-width: 905px){
+    .css-1abc02a .MuiButtonBase-root,
+    .css-hn784z .MuiButtonBase-root{
+        opacity: 0.4 !important; /* always show buttons on larger screens */
+    }
 }

@@ -34,7 +34,7 @@ export default function FodmapTable() {
             </div>
             <TableDrawer open={ open } handleDrawerOpen={ handleDrawerOpen } handleDrawerClose={ handleDrawerClose } Content={ FodmapButtons }  />
             <Grid xs={12} md={5} className="table-grid">
-                            <h1>Tabela FODMAP</h1>
+                            <h1>Dieta Low FODMAP</h1>
                             <TableAccordion Title={'O co chodzi z dietą low FODMAP?'} Content={ <FodmapTableAccordionContent_1 /> } />
                             <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> } />
 

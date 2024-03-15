@@ -72,9 +72,9 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
                 TransitionComponent={Fade}
               >
                 <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/fodmap'>d. Low FODMAP</MenuItem>
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/hit'>d. Przeciwhistaminowa</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/tabele/hit'>d. Przeciwhistaminowe</MenuItem>
                 <Divider />
-                <MenuItem onClick={handleClickDropdown1} component='a' href='/'>Szukaj </MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/'>Szukaj</MenuItem>
               </Menu>
               <Button
                 id="fade-button"
@@ -97,6 +97,9 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
                 TransitionComponent={Fade}
               >
                 <MenuItem onClick={handleCloseDropdown2} component='a' href='/info/o-nas'>O nas</MenuItem>
+                <Divider />
+                <MenuItem onClick={handleCloseDropdown2} component='a' href='/info/rozwoj'>Rozwój</MenuItem>
+
               </Menu>
           </div>
         </Toolbar>

@@ -12,8 +12,7 @@ import { amber, green, red } from '@mui/material/colors';
 
 import HitIcon from '/public/icons/hit2.svg'
 import { styled } from '@mui/material/styles';
-import React from 'react';
-
+import { Fragment } from 'react/jsx-runtime';
 
 const ElementTip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
@@ -47,11 +46,11 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
             <h3 className="title">{name}</h3> 
                 {notes && (
                     <InfoTip title={
-                        <React.Fragment>
+                        <Fragment>
                             {<span>
                                 {notes}
                             </span>}
-                        </React.Fragment>
+                        </Fragment>
                     }>
                         <div className="info-icon">i</div> 
                     </InfoTip>
@@ -66,9 +65,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                         <td>
                             {fodmap === 'low' && (
                                 <ElementTip title={
-                                    <React.Fragment>
+                                    <Fragment>
                                         {<span>Produkt o <b style={{ color: green[500] }}>niskiej zawartości</b> FODMAPów - dozwolony na diecie low FODMAP</span>}
-                                    </React.Fragment>
+                                    </Fragment>
                                 }>
                                     <div className="fodmap-div">
                                             <CheckCircleIcon className="card-icon" sx={{ color: green[500] }} fontSize='large' />
@@ -81,9 +80,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
 
                             {fodmap === 'mid' && (
                                 <ElementTip title={
-                                    <React.Fragment>
+                                    <Fragment>
                                         {<span>Produkt o <b style={{ color: amber[500] }}>średniej zawartości</b> FODMAPów  - dozwolony na diecie moderate FODMAP</span>}
-                                    </React.Fragment>
+                                    </Fragment>
                                 }>
                                     <div className="fodmap-div">
                                             <RemoveCircleIcon className="card-icon" sx={{ color: amber[500] }} fontSize='large' />
@@ -96,9 +95,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
 
                             {fodmap ==='high' && (
                                 <ElementTip title={
-                                    <React.Fragment>
+                                    <Fragment>
                                         {<span>Produkt o <b style={{ color: red[500] }}>wysokiej zawartości</b> FODMAPów - niewskazany w czasie trwania diety</span>}
-                                    </React.Fragment>
+                                    </Fragment>
                                 }>
                                     <div className="fodmap-div">
                                         <CancelIcon className="card-icon" sx={{ color: red[500] }} fontSize='large' />
@@ -112,9 +111,9 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                         <td>
                             {max_use && (
                                 <ElementTip title={
-                                    <React.Fragment>
+                                    <Fragment>
                                         {'Maksymalna dzienna porcja tego produktu na diecie lowFodmap'}
-                                    </React.Fragment>
+                                    </Fragment>
                                 }>
                                     <div className="max-use-div">
                                         <RestaurantIcon color="action"/>
@@ -126,54 +125,22 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
                         <td>
                             {histamine && (
                                     <ElementTip title={
-                                        <React.Fragment>
+                                        <Fragment>
                                             { histamine == '>60%'  &&  <span>Produkt <b>zakazany w większości diet</b> stosowanych przy Nietolerancji Histaminy</span> }
                                             { histamine == '20-60%' && <span>Produkt <b>zakazany w istotnej części diet</b> stosowanych przy Nietolerancji Histaminy</span> }
                                             { histamine == '20%' && <span>Produkt <b>zakazany w niektórych dietach</b> stosowanych przy Nietolerancji Histaminy</span> }
-                                        </React.Fragment>
+                                        </Fragment>
                                     }>
                                         <div className="histamine-div">
                                                 <img className="hit-icon" src={HitIcon} />
-                                                { histamine !== '20-60%' ? <span className="histamine-non-mid-nums">{histamine}</span> : <span className="histamine-mid-nums">{histamine}</span> }
+                                                { histamine !== '20-60%' ? <span className="histamine-non-mid-nums">({histamine})</span> : <span className="histamine-mid-nums">({histamine})</span> }
                                         </div>
                                     </ElementTip>
                             )}
                         </td>
                     </tr>
                 </table>
-
             </div>
-
-            {/* <div className="fodmap-div">
-                <div className={`circle ${fodmap}-fMap`} ></div>
-                <div className="fodmap-sub-div">
-                    <span>Produkt <b>{fodmap}</b> FODMAP </span>
-                    { max_use && <span className="max-use">(dozwolony w ilości: &lt; {max_use}) </span> }
-                </div>
-            </div> */}
-            {/* <div className="max-use-div">
-            </div> */}
-            {/* {histamine && (
-            <div id="histamine-div">
-                <div className={`circle ${histamine}-hist`} ></div>
-                <span>Ten produkt jest zakazany w
-
-                    { (histamine === 'low') && <span> <b>niektórych (&lt;20%)</b> dietach  </span> }
-                    { (histamine === 'mid') && <span> <b>wielu (20-60%)</b> dietach  </span> }
-                    { (histamine === 'high') && <span> <b>większości (&gt;60%)</b> diet  </span>}
-                    
-                    na nietolerancję histaminy
-                </span>
-            </div>
-            )}
-            {notes && (
-            <div id="notes-div">
-                <h4>Dodatkowe informacje:</h4>
-                <p>
-                    {notes}
-                </p>
-            </div>
-            )} */}
         </main>
     </Paper>
 

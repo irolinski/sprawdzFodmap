@@ -5,7 +5,7 @@ export function HitTableAccordionContent_1 () {
     return(
         <>
     <ul className="accordion-list">
-        <li>Nietolerancja histaminy (HIT) to <b>nietolerancja pokarmowa, wywoływana przez pokarmy z zawartością histaminy</b>, powodowana przez deficyt enzymów rozkładających histaminy. Może wywoływać wielorakie objawy - m.in. skórne czy związane z układem pokarmowym. </li>
+        <li>Nietolerancja histaminy (HIT) to <b>nietolerancja pokarmowa, aktywowana przez pokarmy z zawartością histaminy</b>, powodowana przez deficyt enzymów rozkładających histaminy. Może wywoływać wielorakie objawy - m.in. skórne czy związane z układem pokarmowym. </li>
         <li>Jej występowanie weryfikuje się badaniami: m.in. pomiarem enzymu DAO we krwi czy histaminy w moczu. </li>
     </ ul> 
         {/* Matysiak   J.   Histamine   intolerance   (HIT).   Journal  of  Medical  Science.  Journal  of  Medical  Science.  2022;91(3):e727. doi: 10.20883/medical.e727 */}
