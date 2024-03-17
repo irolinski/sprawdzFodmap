@@ -78,6 +78,10 @@
     margin-top: 2em;
 }
 
+.lottie-link{
+    color: #edeaea;
+}
+
 
 @media (min-width: 905px){
     .css-1abc02a .MuiButtonBase-root,

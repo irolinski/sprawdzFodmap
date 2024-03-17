@@ -17,8 +17,8 @@ export const LottieTip = styled(({ className, ...props }: TooltipProps) => (
     <Tooltip {...props} arrow classes={{ popper: className }} />
   ))(({ theme }) =>  ({
     [`& .${tooltipClasses.tooltip}`]: {
-      backgroundColor: 'rgba(235,235,235,.4)',
-      color: '#000',
+      backgroundColor: '#717171',
+      color: '#edeaea',
       boxShadow: theme.shadows[1],
       fontSize: 11,
     },
@@ -86,6 +86,10 @@ const Slide_2 = function () {
         </ div>
     )
 }
+
+
+
+
 
 const Slide_3 = function () {
     return(

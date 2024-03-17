@@ -32,7 +32,7 @@ html {
     right: 5px;
     bottom: 25px;
 
-    display: none !important;
+    display: block;
  
 }
 
@@ -41,9 +41,6 @@ html {
 
 }
 
-.table-page .drawer-button{
-    display: block !important;
-}
 
 .table-accordion{
     box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2) !important;
