@@ -36,17 +36,19 @@ export default function HitTable() {
             
             <TableDrawer open={ open } handleDrawerOpen={ handleDrawerOpen } handleDrawerClose={ handleDrawerClose } Content={ HitButtons }  />
             <Grid xs={12} md={5} className="table-grid">
-                    <h1>Diety przeciwhistaminowe*</h1>
-                <TableAccordion Title={'Czym jest nietolerancja histaminy?'} Content={ <HitTableAccordionContent_1 /> } />
-                <TableAccordion Title={'*O co chodzi z dietami na HIT?'} Content={<HitTableAccordionContent_2 />} />
-                <TableAccordion Title={<b>Jak rozumieć zawartość tej tabeli?</b>} Content={<HitTableAccordionContent_3 />} />
-                <TableAccordion Title={'Skąd mamy te informacje?'} Content={<HitTableAccordionContent_4 />} />
+                    <h1 className="table-header-main header">Diety przeciwhistaminowe*</h1>
+                    <div className="table-info-div">
+                        <TableAccordion Title={'Czym jest nietolerancja histaminy?'} Content={ <HitTableAccordionContent_1 /> } />
+                        <TableAccordion Title={'*O co chodzi z dietami na HIT?'} Content={<HitTableAccordionContent_2 />} />
+                        <TableAccordion Title={<b>Jak rozumieć zawartość tej tabeli?</b>} Content={<HitTableAccordionContent_3 />} />
+                        <TableAccordion Title={'Skąd mamy te informacje?'} Content={<HitTableAccordionContent_4 />} />
+                    </div>
 
 
 
                 {sortedByHistamine.map((group, i) => ( 
                     <div id={`table-cat-${group[0].histamine}`} className ="category-table" key={i}>
-                                <h1 >{group[0].histamine}</h1>
+                                <h1 className="header">{group[0].histamine}</h1>
                                 <TableContainer component={Paper}>
                                     <Table sx={{ minWidth: 250 }} aria-label="simple table">
                                         <TableHead>

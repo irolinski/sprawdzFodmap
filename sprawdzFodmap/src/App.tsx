@@ -7,6 +7,7 @@ import HIT_Chart from './Pages/Tabele/HIT.tsx';
 import Info  from './Pages/Info/About.tsx';
 import Progress  from './Pages/Info/Progress.tsx';
 
+
 import './App.css';
 
 export default function App() {

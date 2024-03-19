@@ -8,6 +8,8 @@ import { Link, Menu, MenuItem, Fade, IconButton, Divider } from '@mui/material';
 import { useState } from 'react';
 
 import FoodBankIcon from '@mui/icons-material/FoodBank';
+import CallMadeIcon from '@mui/icons-material/CallMade';
+import ListIcon from '@mui/icons-material/List';
 
 
 
@@ -36,7 +38,7 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
 
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
+      <AppBar className="navbar" position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar>
           <Link className="page-brand" font-weight="800" href="/">
                 SprawdźFODMAP
@@ -48,7 +50,7 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
                 edge="start"
                 sx={{ mr: 2, ...(open && { display: 'none' }) }}
             >
-                <FoodBankIcon />
+                <ListIcon />
             </IconButton>
           <div className="nav-buttons-div">
               <Button

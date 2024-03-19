@@ -29,7 +29,7 @@ export const LottieTip = styled(({ className, ...props }: TooltipProps) => (
 const Slide_1 = function () {
     return(
         <div className="info-slide">
-            <h2 className="info-header">Kim jesteśmy?</h2>
+            <h2 className="info-header header">Kim jesteśmy?</h2>
                 <ul className="slide-text about-us-text"> SprawdźFODMAP to charytatywny projekt edukacyjny zrodzony z: 
                 <li className="li-indent">🎨 &ensp; Zamiłowania do tworzenia </li>  <li className="li-indent">👩🏼‍💻 &ensp; Wiary w prawo każdego do dostępu do dobrej jakości informacji</li> <li className="li-indent">😇 &ensp; Głębokiej pogardy wobec bólu brzucha </li>
                 </ul>   
@@ -58,7 +58,7 @@ const Slide_1 = function () {
 const Slide_2 = function () {
     return(
         <div className="info-slide">
-            <h2 className="info-header">Nasza misja</h2>
+            <h2 className="info-header header">Nasza misja</h2>
             <ul className="slide-text">
                 <li className="li-indent">🎗️ &ensp; Jesteśmy inicjatywą, ukierunkowaną na doraźną pomoc osobom zmagającym się z chrobami układu pokarmowego (i pokrwnych) </li>
                 <li className='li-indent'>🧩 &ensp; Chcemy ułatwić Ci życie - pomóc Ci w odnalezieniu się na zaleconej diecie</li> 
@@ -94,7 +94,7 @@ const Slide_2 = function () {
 const Slide_3 = function () {
     return(
         <div className="info-slide">
-            <h2 className="info-header">Kontakt</h2>
+            <h2 className="info-header header">Kontakt</h2>
             <ul className="slide-text">
                 <li className="li-indent">
                     ✅ &ensp; Masz jakieś uwagi? Chcesz zgłosić błąd?

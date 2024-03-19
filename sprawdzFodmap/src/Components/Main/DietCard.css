@@ -12,21 +12,22 @@
     scale: 0.8;
 }
 
-header{
+.diet-card header{
     position: relative;
     min-height: 30px;
     max-height: 30px;
     padding-bottom: 0.2em;
 }
 
-.title{
+.diet-card .title{
     margin-bottom: 0px;
     font-size: 1.15em;
     font-weight: 600;
+    font-family: 'Merriweather', serif;
 }
 
 
-.sub-title{
+.diet-card .sub-title{
     color: rgba(0, 0, 0, 0.65);
     font-size: 0.75em;
     display: inline-block;
@@ -34,9 +35,12 @@ header{
     text-overflow: ellipsis;
     overflow: hidden;
     white-space: nowrap;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 500;
+
 }
 
-.info-icon{
+.diet-card .info-icon{
     /* top: 1px;
     right: 1px;
     position: absolute;
@@ -56,44 +60,44 @@ header{
 
 }
 
-.info-icon:hover,
-.info-icon:focus{
+.diet-card .info-icon:hover,
+.diet-card .info-icon:focus{
     color: rgba(0, 0, 0, 0.221);
     border: #0000001a 2px solid;
 }
 
-main{
+.diet-card main{
     font-size: 0.85em;
     padding: 1em 0.2em 0em 0.2em;
 }
 
-.card-row{
+.diet-card .card-row{
     display: inline-flex;
     width: 100%;
     justify-content: end;
 }
 
-.card-row > div{
+.diet-card .card-row > div{
     margin: 0.5em;
 }
 
-.card-icon{
+.diet-card .card-icon{
     transform: translate(-13px, -14px);
     scale: 1.4;
 }
 
-table td {
+.diet-card table td {
 min-width: 6em;
 }
 
 
-.fodmap-div,
-.max-use-div,
-.histamine-div{
+.diet-card .fodmap-div,
+.diet-card .max-use-div,
+.diet-card .histamine-div{
     display: inline-flex;
 }
 
-.fodmap-logo{
+.diet-card .fodmap-logo{
     display: flex;
     flex-direction: column;
 }
@@ -102,23 +106,23 @@ min-width: 6em;
     font-weight: 800;
 }
 
-.fodmap-logo,
-.histamine-div{
+.diet-card .fodmap-logo,
+.diet-card .histamine-div{
     padding: 0 0 0 0.3em;
     font-size: 1.3em; /* wcześniej 1.5em */
 }
 
-.histamine-non-mid-nums{
+.diet-card .histamine-non-mid-nums{
     transform: translateY(5px);
 
 }
 
-.histamine-mid-nums{
+.diet-card .histamine-mid-nums{
     transform: translateY(-5px);
 }
 
-.histamine-non-mid-nums,
-.histamine-mid-nums{
+.diet-card .histamine-non-mid-nums,
+.diet-card .histamine-mid-nums{
     color: rgba(0, 0, 0, 0.55);
 }
 
@@ -127,40 +131,40 @@ min-width: 6em;
 }
 
 
-.max-use-div{
+.diet-card .max-use-div{
     transform: translateX(10px);
     align-items: center;
 }
 
-.max-use{
+.diet-card .max-use{
     font-weight: 400;
     font-size: 1.5em;
     padding-left: 0.22em;
 }
 
-.fodmap-sub-div{
+.diet-card .fodmap-sub-div{
     transform: translate(7.5px, 6.7px);
 
 }
 
-.hit-icon{
+.diet-card .hit-icon{
     max-width: 35px;
     max-height: 35px;
 }
 
-.hit-logo{
+.diet-card .hit-logo{
     font-weight: 800;
 }
 
-.low-hit{
+.diet-card .low-hit{
 color: #FFAE42
 }
 
-.mid-hit{
+.diet-card .mid-hit{
 color: #B0744A
 }
 
-.high-hit{
+.diet-card .high-hit{
 color: #983F4A
 }
 

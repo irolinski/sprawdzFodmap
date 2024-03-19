@@ -34,10 +34,11 @@ export default function FodmapTable() {
             </div>
             <TableDrawer open={ open } handleDrawerOpen={ handleDrawerOpen } handleDrawerClose={ handleDrawerClose } Content={ FodmapButtons }  />
             <Grid xs={12} md={5} className="table-grid">
-                            <h1>Dieta Low FODMAP</h1>
-                            <TableAccordion Title={'O co chodzi z dietą low FODMAP?'} Content={ <FodmapTableAccordionContent_1 /> } />
-                            <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> } />
-
+                            <h1 className="table-header-main">Dieta Low FODMAP</h1>
+                            <div className="table-info-div">
+                                <TableAccordion Title={'O co chodzi z dietą low FODMAP?'} Content={ <FodmapTableAccordionContent_1 /> } />
+                                <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> } />
+                            </div>
                             {sortedByFodmap.map((category, i) => ( 
                                 <div id={`table-cat-${category[0].category}`} className ="category-table" key={i}>
                                     <h1 >{category[0].category}</h1>

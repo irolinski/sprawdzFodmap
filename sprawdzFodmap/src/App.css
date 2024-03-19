@@ -1,5 +1,6 @@
 body{
     overflow-x: hidden;
+    padding-right: 0px !important; /* fixes the bug the makes the elements move on activating nav dropdown button */
 }
 
 .MuiBox-root{
@@ -14,6 +15,11 @@ body{
     position: static !important; /* fix for the bug that makes the nav lift after clicking any button */
 }
 
+.navbar{
+    border-bottom: 0.4px solid rgb(220, 220, 220);
+    padding: 0.5em;
+}
+
 .page-brand{
     margin-right: 1.1em !important;
     font-size: 1.1em !important;
@@ -21,20 +27,51 @@ body{
     transition: color 0.5s;
     cursor: pointer;
     text-decoration: none !important;
+
+    font-family: 'Roboto', serif;
+    font-weight: 500;
+    transition: color 0.8s;
+}
+
+.page-brand:hover{
+   color: rgba(128, 128, 128, 0.739) !important;
+
+}
+
+header{
+    font-family: 'Merriweather', serif;
 }
 
 
 
+.MuiButton-text{
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-weight: 500;
+}
+
 .nav-buttons-div{
-    right: -5px;
+    right: 5px;
     position: absolute;
 }
 
+.drawer-button{
+    display: none;
+}
+
 @media (min-width: 500px) {
+    .navbar{
+        border-bottom: 0;
+        padding: 0 !important;
+    }
     .page-brand{
         font-size: 1.3em !important;
     }
+    .nav-buttons-div{
+        right: 10px;
+    }
+}
 
+@media (min-width: 900px) {
     .nav-buttons-div{
         right: 20px;
     }

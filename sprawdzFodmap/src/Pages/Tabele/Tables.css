@@ -2,8 +2,31 @@ html {
     scroll-behavior: smooth;
   }
 
+.table-page .category-table {
+    margin: 0.2em;
+    padding-bottom: 2em;
+}
+
 .table-accordion{
     position: initial !important;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.table-page h1{
+    font-size: 1.5em;
+}
+
+.table-header-main{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    font-size: 1.7em !important;
+    text-align: center;
+    transform: translateY(-1.8em);
+}
+
+.table-info-div{
+    margin-bottom: 2em;
 }
 
 .accordion-list > li{
@@ -23,7 +46,18 @@ html {
     width: 0px !important; /* this fixes the drawer taking up space in the grid even when it's closed */
   }
 
-.drawer-button{
+.MuiDrawer-docked .MuiDrawer-paper{
+        /* backdrop-filter: brightness(0.2); */
+        /* width: 74% !important; */
+        background-color: #fafafafa;
+        box-sizing: border-box;
+}
+
+.MuiDrawer-docked .MuiDrawer-paper a {
+    font-size: 1em;
+}
+
+.table-page .drawer-button{
     position: fixed !important;
     color: black !important;
     background: #e7e7e7e1 !important;
@@ -32,14 +66,16 @@ html {
     right: 5px;
     bottom: 25px;
 
-    display: block;
+    /* display: flex; */
  
 }
 
 .drawer-button > svg{
-    font-size: 1.2em;
+    font-size: 1.1em;
+    transform: translateY(-0.5px); /* 2px for foodbank icon in case I want to go back to it */ 
 
-}
+} 
+
 
 
 .table-accordion{
@@ -62,9 +98,9 @@ html {
 }
 
 
-.button-scroll-widescreen{
+/* .button-scroll-widescreen{
     position: fixed;
-}
+} */
 
 .button-scroll > a {
     white-space: nowrap;
@@ -135,9 +171,10 @@ html {
         top: 25%;
         white-space: normal;
         overflow: hidden;
-        position: fixed;
         margin-top: 6em;
 
+        display: table; /* fixes bug that makes it not stick in Firefox */
+ 
     }
 
     .button-div-break,

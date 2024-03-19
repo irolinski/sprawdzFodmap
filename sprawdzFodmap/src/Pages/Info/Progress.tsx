@@ -21,8 +21,21 @@ export default function progressPage(){
         return(
             <div className="info-slide">
                 <h2 className="info-header">Nadzieja na przyszłość</h2>
-                    <ul className="slide-text about-us-text"> SprawdźFODMAP to inicjatywa, którą zamierzamy rozwijać zgodnie z zapotrzebowaniem - nasze plany na przyszłość to wprowadzenie m.in.: 
-                    <li className="li-indent">🥒 &ensp; Kolejnych diet </li>  <li className="li-indent">🧘🏽‍♀️ &ensp; Interwencji autoterapeutycznych dla osób cierpiących na IBS (w tym materiałów audiowizualnych)</li> <li className="li-indent">🥗 &ensp; Bazy przepisów </li> <li className="li-indent">📊 &ensp; IBS Trackera - aplikacji, która pomaga pilnować diety; która śledzi natężenie objawów, tak by można było nadzorować postęp terapeutyczny </li>
+                    <ul className="slide-text about-us-text">
+                    <li className="li-no-indent"> SprawdźFODMAP to inicjatywa, którą zamierzamy rozwijać zgodnie z zapotrzebowaniem - nasze pomysły na przyszłość to wprowadzenie m.in.: </li>
+                    <li className="li-indent">🥒 &ensp; Kolejnych diet </li>  <li className="li-indent">🧘🏽‍♀️ &ensp; Interwencji autoterapeutycznych dla osób cierpiących na IBS (w tym materiałów audiowizualnych)</li> <li className="li-indent">🥗 &ensp; Bazy przepisów </li> 
+                    
+                    <LottieTip title={
+                        <Fragment>
+                            {<div>
+                                <span> <b>Tracker</b> to taka aplikacja, która <b>śledzi samopoczucie</b> i natężenie objawów, tak by można było nadzorować <b>postęp terapeutyczny</b> i <b>asystuje w prowadzeniu diety</b> - pomaga znajdywać triggery i nietolerancje</span>
+                            </div>
+                            }
+                        </Fragment>
+                    }>
+                        <li className="li-indent">📊 &ensp; <span className="ibs-tracker-span">IBS Trackera</span></li>
+                    </LottieTip>
+                    
                     </ul> 
 
                     <LottieTip title={
@@ -33,15 +46,15 @@ export default function progressPage(){
                                 }
                         </Fragment>
                     }>
-                    <div className='lottie-wrapper'>
-                    <Lottie
-                    className="lottie"
-                    loop={false}
-                    animationData={plant_animation}
-                    play
-                    style={{ width: 150, height: 150 }}
-                    />             
-                    </div>       
+                        <div className='lottie-wrapper'>
+                            <Lottie
+                            className="lottie"
+                            loop={false}
+                            animationData={plant_animation}
+                            play
+                            style={{ width: 150, height: 150 }}
+                            />             
+                        </div>       
                     </LottieTip>
             </ div>
         )
@@ -71,13 +84,13 @@ export default function progressPage(){
                         </Fragment>
                     }>
                     <div className='lottie-wrapper'>
-                    <Lottie
-                    className="lottie"
-                    loop
-                    animationData={team_animation}
-                    play
-                    style={{ width: 150, height: 150 }}
-                    />             
+                        <Lottie
+                        className="lottie"
+                        loop
+                        animationData={team_animation}
+                        play
+                        style={{ width: 150, height: 150 }}
+                        />             
                     </div>       
                     </LottieTip>
             </ div>
@@ -89,7 +102,6 @@ export default function progressPage(){
         <Navbar />
         <Grid container spacing={2}>
             <Grid xs={12} md={10} className="diet-grid">
-                {/* <h1>O nas</h1> */}
                 <Carousel autoPlay={false} height={500} animation={'slide'} duration={1600} swipe={true} stopAutoPlayOnHover={true} cycleNavigation={false} PrevIcon={<ArrowBackOutlinedIcon />} NextIcon={<ArrowForwardOutlinedIcon />}	  >
                     <Slide_1 />
                     <Slide_2 />
