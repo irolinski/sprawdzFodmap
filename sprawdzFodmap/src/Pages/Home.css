@@ -7,16 +7,16 @@
     display: none;
 }
 
-.first-time-modal{
+.disclaimer-modal{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 40vw;
+    width: 85vw;
     background-color: #FFFFFF;
     border: 2px solid #000;
     box-shadow: 24;
-    padding: 2.5em 5em 2.5em 5em;
+    padding: 2.5em 1em 2.5em 1em;
 }
 
 #disclaimer-modal-title{
@@ -27,11 +27,11 @@
     list-style: none;
 }
 
-
-.first-time-modal .li-indent{
-    padding-left: 1.9em;
-    text-indent: -2em;
+.modal-checkbox-label{
+    transition: opacity 0.7s ease-in;
 }
+
+
 
 .search-input{
     width: 550px;
@@ -75,4 +75,12 @@
 
 .hide{
     display: none
+}
+
+@media (min-width: 500px){
+    .disclaimer-modal{
+        width: 40vw;
+        padding: 2.5em 5em 2.5em 5em;
+        
+    }
 }

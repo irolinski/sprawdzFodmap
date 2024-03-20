@@ -59,15 +59,30 @@ function search(arr: Array<ProductProp>, q: string){
 
 
       const [openModal, setOpenModal] = useState(false);
-      const handleOpenModal = () => setOpenModal(true);
+      const handleOpenModal = () => {
+        setOpenModal(true);
+        
+        setTimeout(() => {
+            setdisclaimerCheckBoxOpacity(1)
+        }, 2000)
+
+        setTimeout(() => {
+            setDisableModalCheckbox(false)
+        }, 4000)
+    }
       
       const handleCloseModal = () => {
         setOpenModal(false);
         localStorage.setItem('disclaimer-seen', 'true');
       }
-
-
+      const [disclaimerCheckBoxOpacity, setdisclaimerCheckBoxOpacity] = useState(0)
+      const [disableModalCheckbox, setDisableModalCheckbox] = useState(true)
       const [disableModalButton, setDisableModalButton] = useState(true)
+
+
+    
+
+
 
       useEffect(() => {
         if(localStorage.getItem('disclaimer-seen') === null) {
@@ -85,29 +100,24 @@ function search(arr: Array<ProductProp>, q: string){
             aria-labelledby=""
             aria-describedby=""
             >
-                <Box className="first-time-modal" >
+                <Box className="disclaimer-modal" >
                     <h2 id="disclaimer-modal-title" className="header">
                         Dobrze Cię widzieć!
                     </h2>
                     <h5 className="header">
                         Jednak zanim przejdziesz dalej, zapoznaj się, proszę, z poniższym zastrzeżeniem
                     </h5>
-                    <ul id="disclaimer-modal-description">
-                        <li className="li-indent">
+                    <div id="disclaimer-modal-description">
+                        <p >
                             Niniejsza strona zawiera informacje na temat stosowania diet, oparte na aktualnych źródłach naukowych i przeznaczona jest celom edukacyjnym. 
                             
-                        </li>
-                        <li className="li-indent">
+                        </p>
+                        <p>
                             Wszelkie kwestia diagnostyczne oraz decyzje dotyczące stosowania interwencji dietetycznych należy podejmować <b>jedynie zgodnie z zaleceniami lekarza i/lub dietetyka kliniczego</b>. 
-
-                        </li>
-                        <li className="li-indent">
-
-                        </li>
-                        <li className="li-indent">
-                        </li>
-                    </ul>
-                    <FormControlLabel required control={<Checkbox onClick={() => setDisableModalButton(!disableModalButton)} />} label="Potwierdzam zapoznanie się z powyższymi informacjami" />
+                        </p>
+  
+                    </div>
+                    <FormControlLabel className="modal-checkbox-label" sx={{opacity: disclaimerCheckBoxOpacity}} required control={<Checkbox onClick={() => setDisableModalButton(!disableModalButton)} disabled={disableModalCheckbox} />} label="Potwierdzam zapoznanie się z powyższymi informacjami" />
                     <Button disabled={disableModalButton} onClick={handleCloseModal}>Idź dalej</Button>
                 </Box>
             </Modal>
