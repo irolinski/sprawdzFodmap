@@ -7,6 +7,32 @@
     display: none;
 }
 
+.first-time-modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40vw;
+    background-color: #FFFFFF;
+    border: 2px solid #000;
+    box-shadow: 24;
+    padding: 2.5em 5em 2.5em 5em;
+}
+
+#disclaimer-modal-title{
+    text-align: center !important;
+}
+#disclaimer-modal-description{
+    font-family: 'Nunito Sans', sans-serif;
+    list-style: none;
+}
+
+
+.first-time-modal .li-indent{
+    padding-left: 1.9em;
+    text-indent: -2em;
+}
+
 .search-input{
     width: 550px;
     max-width: 90vw;

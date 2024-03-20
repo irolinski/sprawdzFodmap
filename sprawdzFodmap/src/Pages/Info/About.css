@@ -49,12 +49,12 @@
     margin: 1em;
 }
 
-.li-indent{
+.about-page .li-indent{
     padding-left: 1.9em;
     text-indent: -2em;
 }
 
-.li-no-indent{
+.about-page .li-no-indent{
     padding-left: 1.9em;
     padding-bottom: 0.5em;
 }
@@ -70,26 +70,26 @@
     cursor: help;
 }
 
-.slide-text a{
+.about-page .slide-text a{
     word-wrap: break-word;
 }
 
-.slide-image{
+.about-page .slide-image{
     max-width: 200px;
 }
 
-.email-link{
+.about-page .email-link{
     font-size: 0.9em;
     word-wrap: normal !important;
     color: #255B70;
 }
 
-.lottie{
+.about-page .lottie{
     margin: auto;
     margin-top: 2em;
 }
 
-.lottie-link{
+.about-page .lottie-link{
     color: #edeaea;
 }
 
@@ -101,10 +101,10 @@
         opacity: 0.4 !important; 
     }
 
-    .info-slide h2{
+    .about-page .info-slide h2{
         font-size: 1.8em ;
     }
-    .slide-text{
+    .about-page .slide-text{
         font-size: 1em;
     }
     
