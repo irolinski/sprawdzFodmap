@@ -26,6 +26,8 @@ export default function HitTable() {
     setOpen(false);
   };
 
+  const catEmojis = ['🟡', '🟠', '🔴']
+
   return (
     <div className="table-page">
         <Navbar  open={ open } handleDrawerOpen = { handleDrawerOpen }/>
@@ -48,7 +50,7 @@ export default function HitTable() {
 
                 {sortedByHistamine.map((group, i) => ( 
                     <div id={`table-cat-${group[0].histamine}`} className ="category-table" key={i}>
-                                <h1 className="header">{group[0].histamine}</h1>
+                                <h1 className="header">{`${catEmojis[i]}   ${group[0].histamine}`}</h1>
                                 <TableContainer component={Paper}>
                                     <Table sx={{ minWidth: 250 }} aria-label="simple table">
                                         <TableHead>
@@ -63,7 +65,7 @@ export default function HitTable() {
                                 key={p.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
                                     <TableCell scope="row">
-                                        <b>{p.name}</b> <br />
+                                        <span className="table-product-name"><b>{p.name}</b></span> <br />
                                         {p.sub_title}
                                     </TableCell>
                                     {/* <TableCell>

@@ -3,6 +3,7 @@ import { red } from "@mui/material/colors";
 
   
   export default function FodmapButtons() {
+
     return (
     <>
         <Button href="#table-cat-Owoce">🍇 Owoce</Button>
@@ -15,7 +16,7 @@ import { red } from "@mui/material/colors";
         <Button href="#table-cat-Napoje">☕️ Napoje</Button>
         <Button href="#table-cat-Dodatki">🧂 Dodatki</Button>
         <Button disabled ></Button>
-        <Button href="/tabele/hit" style={{ color: red[400] }} >Dieta HIT</Button>
+        <Button href="/tabele/hit" style={{ color: red[400] }}  >Dieta HIT</Button>
     </ >
     )
   }

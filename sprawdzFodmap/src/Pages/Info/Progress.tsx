@@ -22,8 +22,8 @@ export default function progressPage(){
             <div className="info-slide">
                 <h2 className="info-header">Nadzieja na przyszłość</h2>
                     <ul className="slide-text about-us-text">
-                    <li className="li-no-indent"> SprawdźFODMAP to inicjatywa, którą zamierzamy rozwijać zgodnie z zapotrzebowaniem - nasze pomysły na przyszłość to wprowadzenie m.in.: </li>
-                    <li className="li-indent">🥒 &ensp; Kolejnych diet </li>  <li className="li-indent">🧘🏽‍♀️ &ensp; Interwencji autoterapeutycznych dla osób cierpiących na IBS (w tym materiałów audiowizualnych)</li> <li className="li-indent">🥗 &ensp; Bazy przepisów </li> 
+                    <li className="li-no-indent"> SprawdźFODMAP to inicjatywa, którą zamierzamy rozwijać zgodnie z zapotrzebowaniem... <br /> <br />... a nasze pomysły na przyszłość to m.in.: </li>
+                    <li className="li-indent">🥒 &ensp; Kolejne diety</li>  <li className="li-indent">🧘🏽‍♀️ &ensp; Interwencje autoterapeutyczne dla osób cierpiących na IBS (w tym materiałów audiowizualnych)</li> <li className="li-indent">🥗 &ensp; Bazy przepisów </li> 
                     
                     <LottieTip title={
                         <Fragment>
@@ -33,7 +33,7 @@ export default function progressPage(){
                             }
                         </Fragment>
                     }>
-                        <li className="li-indent">📊 &ensp; <span className="ibs-tracker-span">IBS Trackera</span></li>
+                        <li className="li-indent">📊 &ensp; <span className="ibs-tracker-span">Gut Health Tracker</span></li>
                     </LottieTip>
                     
                     </ul> 

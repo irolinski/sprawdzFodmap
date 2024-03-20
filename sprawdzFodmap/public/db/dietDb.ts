@@ -1266,7 +1266,7 @@ export default [
       "id": "f_193"
     },
     {
-      "name": "Dżemy domowe ",
+      "name": "Dżemy domowe",
       "sub_title": "(bez cukru)",
       "fodmap": "low",
       "category": "Owoce",
@@ -1329,7 +1329,7 @@ export default [
       "notes": "W celu minimalizacji  objawów, wskazuje się ograniczenie spożycia produktów strączkowych."
     },
     {
-      "name": "Soczewica, ",
+      "name": "Soczewica",
       "sub_title": "(z puszki)",
       "fodmap": "low",
       "category": "straczki",
@@ -1481,12 +1481,6 @@ export default [
       "max_use": "17g",
       "category": "Warzywa",
       "id": "f_224"
-    },
-    {
-      "name": "Groszek cukrowy odmiany Snap Pea",
-      "fodmap": "high",
-      "category": "Warzywa",
-      "id": "f_225"
     },
     {
       "name": "Groszek, mrożony",

@@ -3,7 +3,8 @@ html {
   }
 
 .table-page .category-table {
-    margin: 0.2em;
+    margin: 0.8em;
+    margin-top: 2em !important;
     padding-bottom: 2em;
 }
 
@@ -27,6 +28,9 @@ html {
 
 .table-info-div{
     margin-bottom: 2em;
+
+    padding-bottom: 4em;
+    border-bottom: 0.8px #00000014 double;
 }
 
 .accordion-list > li{
@@ -89,12 +93,19 @@ html {
     margin: auto;
     padding: 1em;
     color: brown;
-    width: 90px;
     left: 8%;
     top: 25%;
     white-space: normal;
     overflow: hidden;
+    /* padding-right: 6em; */
+    /* border-right: 1px rgba(0, 0, 0, 0.04) solid; */
+
+
     /* position: fixed; */
+}
+
+.button-scroll a{
+    font-size: 0.8em;
 }
 
 
@@ -107,7 +118,12 @@ html {
 }
 
 .button-scroll > a:last-of-type{
-    white-space: normal  !important;
+    white-space: nowrap  !important;
+    padding-top: 1em;
+}
+
+.button-scroll button{
+    width: 144px;
 }
 
 
@@ -150,6 +166,9 @@ html {
 
 }
 
+.table-product-name{
+    font-size: 1.1em;
+}
 
 .low-fodmap-table-cell{
     background-color: #4CAF50 !important;
@@ -175,6 +194,8 @@ html {
 
         display: table; /* fixes bug that makes it not stick in Firefox */
  
+        padding-right: 6em;
+        border-right: 1px rgba(0, 0, 0, 0.04) solid;
     }
 
     .button-div-break,

@@ -25,6 +25,9 @@ export default function FodmapTable() {
     setOpen(false);
   };
 
+  const catEmojis = ['🍇', '🥦', '🥩', '🌾', '🐄', '🥜', '🍬', '☕️ ', '🧂']
+
+
   return (
     <div className="table-page">
         <Navbar  open={ open } handleDrawerOpen={ handleDrawerOpen }/>
@@ -34,14 +37,14 @@ export default function FodmapTable() {
             </div>
             <TableDrawer open={ open } handleDrawerOpen={ handleDrawerOpen } handleDrawerClose={ handleDrawerClose } Content={ FodmapButtons }  />
             <Grid xs={12} md={5} className="table-grid">
-                            <h1 className="table-header-main">Dieta Low FODMAP</h1>
+                            <h1 className="table-header-main header">Dieta Low FODMAP</h1>
                             <div className="table-info-div">
                                 <TableAccordion Title={'O co chodzi z dietą low FODMAP?'} Content={ <FodmapTableAccordionContent_1 /> } />
                                 <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> } />
                             </div>
                             {sortedByFodmap.map((category, i) => ( 
                                 <div id={`table-cat-${category[0].category}`} className ="category-table" key={i}>
-                                    <h1 >{category[0].category}</h1>
+                                    <h1 className="header">{`${catEmojis[i]}`} &nbsp;{`${category[0].category}`}</h1>
                                     <TableContainer component={Paper}>
                                         <Table sx={{ minWidth: 250 }} aria-label="simple table">
                                         <colgroup>
@@ -63,7 +66,7 @@ export default function FodmapTable() {
                                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                                 >
                                                     <TableCell scope="row" className="product-table-div">
-                                                        <b>{p.name}</b> <br />
+                                                        <span className="table-product-name"><b>{p.name}</b></span> <br />
                                                         {p.sub_title}
                                                     </TableCell>
                                                     <TableCell align="right" className={`fodmap-table-cell ${p.fodmap}-fodmap-table-cell`}>
