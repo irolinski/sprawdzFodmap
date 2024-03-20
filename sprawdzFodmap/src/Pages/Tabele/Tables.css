@@ -24,7 +24,13 @@ html {
     font-size: 1.7em !important;
     text-align: center;
     transform: translateY(-1.8em);
+
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #0000001f;
+    text-decoration-thickness: 0.5px;
 }
+
 
 .table-info-div{
     margin-bottom: 2em;
@@ -105,6 +111,7 @@ html {
 }
 
 .button-scroll a{
+    font-family: 'Nunito Sans', sans-serif;
     font-size: 0.8em;
 }
 
@@ -119,7 +126,7 @@ html {
 
 .button-scroll > a:last-of-type{
     white-space: nowrap  !important;
-    padding-top: 1em;
+    padding: 0.5em 1em 0.5em 1em;
 }
 
 .button-scroll button{
@@ -150,7 +157,8 @@ html {
 }
 
 .table-page th{
-    font-size: 1rem !important; 
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1.2rem !important; 
     background-color: #00000003;
 
 }
@@ -211,7 +219,11 @@ html {
 }
 
 @media (max-width: 500px){
-    .table-page table th,
+    
+    .table-page table th{
+        font-size: 0.9em !important;
+    }
+
     .table-page table td{
         font-size: 0.7em !important;
     }
