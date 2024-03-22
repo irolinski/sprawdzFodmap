@@ -6,6 +6,8 @@ import products from '../../public/db/dietDb.ts'
 import DietCard from "../Components/Main/DietCard.tsx";
 import Navbar from '../Components/Nav.tsx'
 
+import doggie_animation from '../../public/animations/doggie 1.gif'
+
 export type ProductProp = {
     name: string,
     sub_title?: string,
@@ -67,16 +69,16 @@ function search(arr: Array<ProductProp>, q: string){
         }, 2000)
 
         setTimeout(() => {
-            setDisableModalCheckbox(false)
-        }, 4000)
+            setPointerEvtsModalCheckbox('')
+        }, 3000)
     }
       
       const handleCloseModal = () => {
         setOpenModal(false);
         localStorage.setItem('disclaimer-seen', 'true');
       }
-      const [disclaimerCheckBoxOpacity, setdisclaimerCheckBoxOpacity] = useState(0)
-      const [disableModalCheckbox, setDisableModalCheckbox] = useState(true)
+      const [disclaimerCheckBoxOpacity, setdisclaimerCheckBoxOpacity] = useState(0.3)
+      const [pointerEvtsModalCheckbox, setPointerEvtsModalCheckbox] = useState('none')
       const [disableModalButton, setDisableModalButton] = useState(true)
 
 
@@ -84,32 +86,35 @@ function search(arr: Array<ProductProp>, q: string){
 
 
 
-      useEffect(() => {
-        if(localStorage.getItem('disclaimer-seen') === null) {
-            setOpenModal(true);
-        }
-      })
+    //   useEffect(() => {
+    //     if(localStorage.getItem('disclaimer-seen') === null) {
+    //         setOpenModal(true);
+    //     }
+    //   })
 
     return(
 
         <div className="main-page">
 
-            <Button onClick={handleOpenModal}>Open modal</Button>
+            <Button className="open-modal-" onClick={handleOpenModal}>Open modal</Button>  {/* delete this in production! */}
             <Modal
             open={openModal}
             aria-labelledby=""
             aria-describedby=""
             >
                 <Box className="disclaimer-modal" >
+                    <img id="modal-doggie" src={doggie_animation} />
                     <h2 id="disclaimer-modal-title" className="header">
                         Dobrze Cię widzieć!
                     </h2>
-                    <h5 className="header">
-                        Jednak zanim przejdziesz dalej, zapoznaj się, proszę, z poniższym zastrzeżeniem
-                    </h5>
+                    <div id="disclaimer-modal-request-div">
+                        <span id="disclaimer-modal-request">
+                            Zanim przejdziesz dalej, zapoznaj się, proszę, z poniższym zastrzeżeniem:
+                        </span>
+                    </div>
                     <div id="disclaimer-modal-description">
                         <p >
-                            Niniejsza strona zawiera informacje na temat stosowania diet, oparte na aktualnych źródłach naukowych i przeznaczona jest celom edukacyjnym. 
+                            Niniejsza strona zawiera informacje na temat stosowania diet, oparte na aktualnych źródłach naukowych i przeznaczona jest celom edukacyjnym. Nie jest jednak w stanie zastąpić konsultacji z profesjonalistą.
                             
                         </p>
                         <p>
@@ -117,8 +122,9 @@ function search(arr: Array<ProductProp>, q: string){
                         </p>
   
                     </div>
-                    <FormControlLabel className="modal-checkbox-label" sx={{opacity: disclaimerCheckBoxOpacity}} required control={<Checkbox onClick={() => setDisableModalButton(!disableModalButton)} disabled={disableModalCheckbox} />} label="Potwierdzam zapoznanie się z powyższymi informacjami" />
-                    <Button disabled={disableModalButton} onClick={handleCloseModal}>Idź dalej</Button>
+                    <FormControlLabel id="modal-checkbox-label" className="modal-checkbox-label" sx={{opacity: disclaimerCheckBoxOpacity, pointerEvents: pointerEvtsModalCheckbox}}  
+                    control={<Checkbox style ={{color: "#000000"}}  onClick={() => setDisableModalButton(!disableModalButton)} />} label="Potwierdzam zapoznanie się z powyższymi informacjami." />
+                    <Button disabled={disableModalButton} onClick={handleCloseModal} variant="contained">Idź dalej</Button>
                 </Box>
             </Modal>
 

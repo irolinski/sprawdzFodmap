@@ -59,69 +59,70 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
         </header>
         <main>
             <div className="card-row">
-
                 <table>
                     <tr>
-                        <td>
-                            {fodmap === 'low' && (
-                                <ElementTip title={
-                                    <Fragment>
-                                        {<span>Produkt o <b style={{ color: green[500] }}>niskiej zawartości</b> FODMAPów - dozwolony na diecie low FODMAP</span>}
-                                    </Fragment>
-                                }>
-                                    <div className="fodmap-div">
-                                            <CheckCircleIcon className="card-icon" sx={{ color: green[500] }} fontSize='large' />
-                                            <div className="fodmap-logo">
-                                                <span className="fmap-cat low-fmap" style={{ color: green[500] }}>Low</span> <span>FODMAP</span>
-                                            </div>
-                                    </div>
-                                </ElementTip>
-                            )}
-
-                            {fodmap === 'mid' && (
-                                <ElementTip title={
-                                    <Fragment>
-                                        {<span>Produkt o <b style={{ color: amber[500] }}>średniej zawartości</b> FODMAPów  - dozwolony na diecie moderate FODMAP</span>}
-                                    </Fragment>
-                                }>
-                                    <div className="fodmap-div">
-                                            <RemoveCircleIcon className="card-icon" sx={{ color: amber[500] }} fontSize='large' />
-                                            <div className="fodmap-logo">
-                                                <span className="fmap-cat mid-fmap" style={{ color: amber[500] }} >Mid</span> <span>FODMAP</span> 
-                                            </div>
-                                    </div>
-                                </ElementTip>
-                            )}
-
-                            {fodmap ==='high' && (
-                                <ElementTip title={
-                                    <Fragment>
-                                        {<span>Produkt o <b style={{ color: red[500] }}>wysokiej zawartości</b> FODMAPów - niewskazany w czasie trwania diety</span>}
-                                    </Fragment>
-                                }>
-                                    <div className="fodmap-div">
-                                        <CancelIcon className="card-icon" sx={{ color: red[500] }} fontSize='large' />
-                                        <div className="fodmap-logo">
-                                                <span className="fmap-cat high-fmap" style={{ color: red[500] }} >High</span> <span>FODMAP</span>
+                        <div className='card-fodmap-data'>
+                            <td>
+                                {fodmap === 'low' && (
+                                    <ElementTip title={
+                                        <Fragment>
+                                            {<span>Produkt o <b style={{ color: green[500] }}>niskiej zawartości</b> FODMAPów - dozwolony na diecie low FODMAP</span>}
+                                        </Fragment>
+                                    }>
+                                        <div className="fodmap-div">
+                                                <CheckCircleIcon className="card-icon" sx={{ color: green[500] }} fontSize='large' />
+                                                <div className="fodmap-logo">
+                                                    <span className="fmap-cat low-fmap" style={{ color: green[500] }}>Low</span> <span>FODMAP</span>
+                                                </div>
                                         </div>
-                                    </div>
-                                </ElementTip>
-                            )}
-                        </td>
-                        <td>
-                            {max_use && (
-                                <ElementTip title={
-                                    <Fragment>
-                                        {'Maksymalna dzienna porcja tego produktu na diecie lowFodmap'}
-                                    </Fragment>
-                                }>
-                                    <div className="max-use-div">
-                                        <RestaurantIcon color="action"/>
-                                        <span className="max-use">{max_use}</span>
-                                    </div>
-                                </ElementTip>
-                            )}
-                        </td>
+                                    </ElementTip>
+                                )}
+
+                                {fodmap === 'mid' && (
+                                    <ElementTip title={
+                                        <Fragment>
+                                            {<span>Produkt o <b style={{ color: amber[500] }}>średniej zawartości</b> FODMAPów  - dozwolony na diecie moderate FODMAP</span>}
+                                        </Fragment>
+                                    }>
+                                        <div className="fodmap-div">
+                                                <RemoveCircleIcon className="card-icon" sx={{ color: amber[500] }} fontSize='large' />
+                                                <div className="fodmap-logo">
+                                                    <span className="fmap-cat mid-fmap" style={{ color: amber[500] }} >Mid</span> <span>FODMAP</span> 
+                                                </div>
+                                        </div>
+                                    </ElementTip>
+                                )}
+
+                                {fodmap ==='high' && (
+                                    <ElementTip title={
+                                        <Fragment>
+                                            {<span>Produkt o <b style={{ color: red[500] }}>wysokiej zawartości</b> FODMAPów - niewskazany w czasie trwania diety</span>}
+                                        </Fragment>
+                                    }>
+                                        <div className="fodmap-div">
+                                            <CancelIcon className="card-icon" sx={{ color: red[500] }} fontSize='large' />
+                                            <div className="fodmap-logo">
+                                                    <span className="fmap-cat high-fmap" style={{ color: red[500] }} >High</span> <span>FODMAP</span>
+                                            </div>
+                                        </div>
+                                    </ElementTip>
+                                )}
+                            </td>
+                            <td>
+                                {max_use && (
+                                    <ElementTip title={
+                                        <Fragment>
+                                            {'Maksymalna dzienna porcja tego produktu na diecie lowFodmap'}
+                                        </Fragment>
+                                    }>
+                                        <div className="max-use-div">
+                                            <RestaurantIcon color="action"/>
+                                            <span className="max-use">{max_use}</span>
+                                        </div>
+                                    </ElementTip>
+                                )}
+                            </td>
+                        </div>
                         <td>
                             {histamine && (
                                     <ElementTip title={

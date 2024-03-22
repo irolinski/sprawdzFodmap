@@ -10,16 +10,23 @@ import Progress  from './Pages/Info/Progress.tsx';
 
 import './App.css';
 
+
 export default function App() {
+
+
+
+
     return(
         <>
+
         <Routes>
-            <Route path='/' element={<Homepage />} />
-            <Route path='/tabele/fodmap' element={<Tables />} />
-            <Route path='/tabele/hit' element={<HIT_Chart />} />
-            <Route path='/info/o-nas' element={<Info />} />
-            <Route path='info/rozwoj' element={<Progress />} />
+                <Route path='/' element={<Homepage />} />
+                <Route path='/tabele/fodmap' element={<Tables />} />
+                <Route path='/tabele/hit' element={<HIT_Chart />} />
+                <Route path='/info/o-nas' element={<Info />} />
+                <Route path='info/rozwoj' element={<Progress />} />
         </Routes>
+
         </>
     )
 }

@@ -23,20 +23,25 @@ html {
     margin-bottom: 1em;
     font-size: 1.7em !important;
     text-align: center;
-    transform: translateY(-1.8em);
+    transform: translateY(-1em);
 
-    text-decoration: underline;
+    /* text-decoration: underline;
     text-underline-position: under;
     text-decoration-color: #0000001f;
-    text-decoration-thickness: 0.5px;
+    text-decoration-thickness: 0.5px; */
 }
 
 
 .table-info-div{
     margin-bottom: 2em;
-
     padding-bottom: 4em;
     border-bottom: 0.8px #00000014 double;
+
+    margin: auto;
+    max-width: 75vw;
+
+    padding-top: 2em;
+    border-top: 1px solid #0000001a;
 }
 
 .accordion-list > li{
@@ -98,7 +103,6 @@ html {
     width: 75%;
     margin: auto;
     padding: 1em;
-    color: brown;
     left: 8%;
     top: 25%;
     white-space: normal;
@@ -111,8 +115,10 @@ html {
 }
 
 .button-scroll a{
-    font-family: 'Nunito Sans', sans-serif;
+    padding-bottom: 0.1em;
+    font-family: 'Inter', sans-serif;
     font-size: 0.8em;
+    color: rgba(0, 0, 0, 0.971);
 }
 
 
@@ -124,10 +130,10 @@ html {
     white-space: nowrap;
 }
 
-.button-scroll > a:last-of-type{
+/* .button-scroll > a:last-of-type{
     white-space: nowrap  !important;
     padding: 0.5em 1em 0.5em 1em;
-}
+} */
 
 .button-scroll button{
     width: 144px;

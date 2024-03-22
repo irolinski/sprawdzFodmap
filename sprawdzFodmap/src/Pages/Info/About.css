@@ -28,7 +28,9 @@
     /* transform: translateY(-0.5em); */
 }
 
+
 .info-slide h2{
+    font-family: 'Merriweather', sans-serif;
     font-weight: 600;
     font-size: 1.5em ;
     text-align: center;
@@ -93,7 +95,30 @@
     color: #edeaea;
 }
 
+#lottie-plant{
+    scale: 0.95;
 
+}
+
+
+@media(min-width: 500px){
+
+    .about-page .info-slide h2{
+        font-size: 1.7em ;
+    }
+    .about-page .slide-text{
+        font-size: 1em;
+    }
+
+    .about-page .lottie{
+        scale: 1.4;
+    }
+
+    #lottie-plant{
+        transform:translate( 150px ,-100px);
+        scale: 0.85;
+    }
+}
 
 @media (min-width: 905px){
     .css-1abc02a .MuiButtonBase-root,
@@ -102,10 +127,18 @@
     }
 
     .about-page .info-slide h2{
-        font-size: 1.8em ;
+        font-size: 1.9em ;
     }
     .about-page .slide-text{
-        font-size: 1em;
+        font-size: 1.1em;
     }
-    
+
+    .about-page .lottie{
+        scale: 1.5;
+    }
+
+    #lottie-plant{
+        /* transform:translate( 150px ,-100px) ; */
+        scale: 0.9;
+    }
 }
