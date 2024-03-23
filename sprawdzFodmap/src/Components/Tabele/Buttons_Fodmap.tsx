@@ -1,13 +1,11 @@
 import { Button, Divider } from "@mui/material";
-import { red } from "@mui/material/colors";
-
   
   export default function FodmapButtons() {
 
     return (
     <>
         <Button href="#table-cat-Owoce">🍇 Owoce</Button>
-        <Divider />
+                <Divider />
         <Button href="#table-cat-Warzywa">🥦 Warzywa</Button>
                 <Divider />
 

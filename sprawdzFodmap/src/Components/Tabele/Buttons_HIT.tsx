@@ -1,5 +1,4 @@
-import { Button } from "@mui/material";
-import { red } from "@mui/material/colors";
+import { Button, Divider } from "@mui/material";
 
 
 export default function HitButtons () {
@@ -7,7 +6,9 @@ export default function HitButtons () {
 
         <>
             <Button href="#table-cat-20%">🟡 20%</Button>
+            <Divider />
             <Button href="#table-cat-20-60%">🟠 20-60%</Button>
+            <Divider />
             <Button href="#table-cat->60%">🔴 60%</Button>
         </>
     )
