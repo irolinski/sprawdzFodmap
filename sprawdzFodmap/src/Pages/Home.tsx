@@ -86,17 +86,17 @@ function search(arr: Array<ProductProp>, q: string){
 
 
 
-    //   useEffect(() => {
-    //     if(localStorage.getItem('disclaimer-seen') === null) {
-    //         setOpenModal(true);
-    //     }
-    //   })
+      useEffect(() => {
+        if(localStorage.getItem('disclaimer-seen') === null) {
+            handleOpenModal();
+        }
+      })
 
     return(
 
         <div className="main-page">
 
-            <Button className="open-modal-" onClick={handleOpenModal}>Open modal</Button>  {/* delete this in production! */}
+            {/* <Button className="open-modal-" onClick={handleOpenModal}>Open modal</Button>  delete this in production! */}
             <Modal
             open={openModal}
             aria-labelledby=""
