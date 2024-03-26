@@ -2,7 +2,7 @@
   "name": "sprawdzfodmap",
   "private": false,
   "version": "0.0.0",
-  "homepage": "https://szczek.github.io/wrazliwe-jelita/",
+  "homepage": "https://szczek.github.io/",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
