@@ -1,14 +1,10 @@
 .diet-card{
-    /* margin: 1rem; */
     margin: 0em;
-    /* padding: 0.5rem 2rem 2rem 2rem;  */
     padding: 0.5rem 3rem 2rem 3rem;
     min-width: 250px;
     max-width: 250px;
     max-height: 150px;
     color: black;
-    /* box-shadow: rgba(0, 0, 0, 0.15) 1px 3px 3px 2px; */
-    /* border-radius: 7px; */
     scale: 0.8; 
     box-shadow: none !important; 
     border-radius: 20px !important;
@@ -44,12 +40,6 @@
 }
 
 .diet-card .info-icon{
-    /* top: 1px;
-    right: 1px;
-    position: absolute;
-    cursor: pointer;
-    transition: color 1s; */
-
     height: 20px;
     top: 1px;
     right: -25px;
@@ -58,9 +48,7 @@
     border: #000000a3 2px solid;
     border-radius: 50%;
     width: 20px;
-
     transition: color 0.7s border 0.7s;
-
 }
 
 .diet-card .info-icon:hover,
@@ -86,7 +74,7 @@
 }
 
 .diet-card .card-icon{
-    transform: translate(-15px, -14px);
+    transform: translate(-15px, -6px);
     scale: 1.4;
 }
 

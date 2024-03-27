@@ -1,4 +1,4 @@
-import products from '../../public/db/dietDb.ts'
+import products from '../../../public/db/dietDb.ts'
 
 
 
@@ -17,10 +17,9 @@ const getCategory = function (categoryName: string) {
              return 0;
          }
      )
- }
+}
 
- const cukry = getCategory('Cukry')
-// const [cukry, setCukry] = useState(getCategory('Cukry'));
+const cukry = getCategory('Cukry')
 const dodatki = getCategory('Dodatki')
 const mieso = getCategory('Mięso')
 const nabial = getCategory('Nabiał')
@@ -31,9 +30,6 @@ const warzywa = getCategory('Warzywa')
 const zboza = getCategory('Zboża')
 
 export const sortedByFodmap = [ owoce, warzywa, mieso, zboza, nabial, orzechy, cukry, napoje, dodatki ];
-
-
-
 
 
 const getHistamineTier = function (tier: string) {

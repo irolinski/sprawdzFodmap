@@ -24,11 +24,6 @@ html {
     font-size: 1.7em !important;
     text-align: center;
     transform: translateY(-1em);
-
-    /* text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-color: #0000001f;
-    text-decoration-thickness: 0.5px; */
 }
 
 
@@ -36,10 +31,8 @@ html {
     margin-bottom: 2em;
     padding-bottom: 4em;
     border-bottom: 0.8px #00000014 double;
-
     margin: auto;
     max-width: 75vw;
-
     padding-top: 2em;
     border-top: 1px solid #0000001a;
 }
@@ -62,8 +55,6 @@ html {
   }
 
 .MuiDrawer-docked .MuiDrawer-paper{
-        /* backdrop-filter: brightness(0.2); */
-        /* width: 74% !important; */
         background-color: #fafafafa;
         box-sizing: border-box;
 }
@@ -79,10 +70,7 @@ html {
     padding: 10px;
     font-size: 2em !important;
     right: 5px;
-    bottom: 25px;
-
-    /* display: flex; */
- 
+    bottom: 25px; 
 }
 
 .drawer-button > svg{
@@ -107,18 +95,13 @@ html {
     top: 25%;
     white-space: normal;
     overflow: hidden;
-    /* padding-right: 6em; */
-    /* border-right: 1px rgba(0, 0, 0, 0.04) solid; */
-
-
-    /* position: fixed; */
 }
 
 .button-scroll a{
     padding-bottom: 0.1em;
     font-family: 'Inter', sans-serif;
     font-size: 0.8em !important;
-    color: rgba(0, 0, 0, 0.971);
+    color: #212121;
     width: 100%;
     display: block;
     -webkit-align-items: center;
@@ -161,29 +144,18 @@ html {
 }
 
 .button-scroll a:hover{
-    background-color: #F5F5F5;
+    background-color: #F6FAFE;
     transition: background-color 0.1s;
 
 }
-
-/* .button-scroll-widescreen{
-    position: fixed;
-} */
 
 .button-scroll > a {
     white-space: nowrap;
 }
 
-/* .button-scroll > a:last-of-type{
-    white-space: nowrap  !important;
-    padding: 0.5em 1em 0.5em 1em;
-} */
-
 .button-scroll button{
     width: 144px;
 }
-
-
 
 .table-grid{
    right: 25%; 
@@ -203,14 +175,12 @@ html {
 .table-page table{
     table-layout: fixed;
     padding: 1.5em;
-
 }
 
 .table-page th{
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1.2rem !important; 
     background-color: #00000003;
-
 }
 
 .fodmap-table-div{
@@ -221,7 +191,6 @@ html {
 
 .table-page td{
     background-color: #c9c9c92e;
-
 }
 
 .table-product-name{
@@ -240,6 +209,7 @@ html {
     background-color: #F54335 !important;
 }
 
+
 @media (min-width: 905px) {
     .button-scroll{
         position: sticky !important;
@@ -249,15 +219,14 @@ html {
         white-space: normal;
         overflow: hidden;
         margin-top: 6em;
-
-        display: table; /* fixes bug that makes it not stick in Firefox */
- 
+        display: table; /* fixes the bug that makes it not stick in Firefox */
         padding-right: 6em;
         border-right: 1px rgba(0, 0, 0, 0.04) solid;
     }
 
     .button-div-break,
-    .drawer-button{
+    .drawer-button,
+    .MuiDrawer-root > .MuiPaper-root{
         display: none !important;
     }
 }

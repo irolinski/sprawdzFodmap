@@ -6,11 +6,9 @@
 }
 
 .about-page .diet-grid{
-  
     justify-content: unset;
     max-width: 100%;
     margin: auto;
-
 }
 
 .css-ohwg9z{
@@ -25,7 +23,6 @@
     height: 100%;
     max-width: 480px;
     padding-bottom: 2em;
-    /* transform: translateY(-0.5em); */
 }
 
 
@@ -138,7 +135,6 @@
     }
 
     #lottie-plant{
-        /* transform:translate( 150px ,-100px) ; */
         scale: 0.9;
     }
 }

@@ -138,7 +138,6 @@ export default function Info () {
             <Navbar />
             <Grid container spacing={2}>
                 <Grid xs={12} md={10} className="diet-grid">
-                    {/* <h1>O nas</h1> */}
                     <Carousel autoPlay={false} height={550} animation={'slide'} duration={1600} swipe={true} stopAutoPlayOnHover={true} cycleNavigation={false} PrevIcon={<ArrowBackOutlinedIcon />} NextIcon={<ArrowForwardOutlinedIcon />}	  >
                         <Slide_1 />
                         <Slide_2 />

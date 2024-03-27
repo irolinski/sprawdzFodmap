@@ -5,7 +5,7 @@ body{
 
 .MuiBox-root{
     overflow: hidden !important;
-    padding-left: 0 !important;
+    /* padding-left: 0 !important; */
 }
 
 .MuiAppBar-root{
@@ -57,6 +57,13 @@ body{
 
 .drawer-button{
     display: none;
+}
+
+@media (max-width: 900px) {
+    .page-brand{
+        position: absolute;
+        left: 18px;
+    }
 }
 
 @media (min-width: 500px) {

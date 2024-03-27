@@ -36,18 +36,17 @@ function search(arr: Array<ProductProp>, q: string){
         || p.sub_title && p.sub_title.toLowerCase().includes(q.toLowerCase()))
         && a.push(p)))
 
-        return a
+        return a;
 }
   
-
-    const [filteredData, setFilteredData] = useState<ProductProp[]>([])
-    const [showLoading, setShowLoading] = useState(false)
+    const [filteredData, setFilteredData] = useState<ProductProp[]>([]);
+    const [showLoading, setShowLoading] = useState(false);
 
     const searchData = async (evt: React.ChangeEvent<HTMLInputElement>) => {
 
         setShowLoading(true)
 
-        let results: any[] = [...products]
+        let results: any[] = [...products];
         const query = evt.currentTarget.value;
 
         results = search(results, query);
@@ -55,10 +54,9 @@ function search(arr: Array<ProductProp>, q: string){
 
         (query != '') ? setFilteredData(results) : setFilteredData([]);
 
-        setTimeout (() => {setShowLoading(false)}, 400)
+        setTimeout (() => {setShowLoading(false)}, 400);
 
     }    
-
 
       const [openModal, setOpenModal] = useState(false);
       const handleOpenModal = () => {
@@ -66,24 +64,20 @@ function search(arr: Array<ProductProp>, q: string){
         
         setTimeout(() => {
             setdisclaimerCheckBoxOpacity(1)
-        }, 2000)
+        }, 2000);
 
         setTimeout(() => {
             setPointerEvtsModalCheckbox('')
-        }, 3000)
+        }, 3000);
     }
       
       const handleCloseModal = () => {
         setOpenModal(false);
         localStorage.setItem('disclaimer-seen', 'true');
       }
-      const [disclaimerCheckBoxOpacity, setdisclaimerCheckBoxOpacity] = useState(0.3)
-      const [pointerEvtsModalCheckbox, setPointerEvtsModalCheckbox] = useState('none')
-      const [disableModalButton, setDisableModalButton] = useState(true)
-
-
-    
-
+      const [disclaimerCheckBoxOpacity, setdisclaimerCheckBoxOpacity] = useState(0.3);
+      const [pointerEvtsModalCheckbox, setPointerEvtsModalCheckbox] = useState('none');
+      const [disableModalButton, setDisableModalButton] = useState(true);
 
 
       useEffect(() => {
@@ -93,10 +87,7 @@ function search(arr: Array<ProductProp>, q: string){
       })
 
     return(
-
         <div className="main-page">
-
-            {/* <Button className="open-modal-" onClick={handleOpenModal}>Open modal</Button>  delete this in production! */}
             <Modal
             open={openModal}
             aria-labelledby=""
@@ -109,11 +100,11 @@ function search(arr: Array<ProductProp>, q: string){
                     </h2>
                     <div id="disclaimer-modal-request-div">
                         <span id="disclaimer-modal-request">
-                            Zanim przejdziesz dalej, zapoznaj się, proszę, z poniższym zastrzeżeniem:
+                            Zanim przejdziesz dalej, proszę, zapoznaj się z poniższym zastrzeżeniem:
                         </span>
                     </div>
                     <div id="disclaimer-modal-description">
-                        <p >
+                        <p>
                             Niniejsza strona zawiera informacje na temat stosowania diet, oparte na aktualnych źródłach naukowych i przeznaczona jest celom edukacyjnym. Nie jest jednak w stanie zastąpić konsultacji z profesjonalistą.
                             
                         </p>
@@ -128,9 +119,8 @@ function search(arr: Array<ProductProp>, q: string){
                 </Box>
             </Modal>
 
-
-
             <Navbar />
+
             <Grid container spacing={2} className="home-grid">
                 <Grid xs={12} md={10} className="diet-grid">
                     <TextField className="search-input" label="Wprowadź nazwę produktu" variant="standard" onChange={searchData} />

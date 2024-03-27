@@ -41,7 +41,7 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
           <Link className="page-brand" font-weight="800" href={`/`}>
                 SprawdźFODMAP
           </Link>
-          <IconButton className="drawer-button"
+          /* <IconButton className="drawer-button"
                 color="inherit"
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}

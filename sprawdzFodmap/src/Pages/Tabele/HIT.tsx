@@ -5,12 +5,12 @@ import './Tabele.css';
 import Grid from '@mui/material/Unstable_Grid2';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
 import Navbar from '../../Components/Nav.tsx'
-import { sortedByHistamine } from '../../Components/productsSorted.ts';
+import { sortedByHistamine } from '../../Components/Tabele/productsSorted.ts';
 import { ProductProp } from '../Home.tsx';
 import { useState } from 'react';
-import HitButtons from '../../Components/Tabele/Buttons_HIT.tsx';
-import TableDrawer from '../../Components/Tabele/Drawer.tsx';
-import TableAccordion from '../../Components/Tabele/Accordion_Tables.tsx';
+import HitButtons from '../../Components/Tabele/UI Elements/Buttons_HIT.tsx';
+import TableDrawer from '../../Components/Tabele/UI Elements/Drawer.tsx';
+import TableAccordion from '../../Components/Tabele/UI Elements/Accordion_Tables.tsx';
 import { HitTableAccordionContent_1, HitTableAccordionContent_2, HitTableAccordionContent_3, HitTableAccordionContent_4 } from '../../Components/Tabele/Text/HitTableAccordionContent.tsx';
 
 
@@ -56,7 +56,6 @@ export default function HitTable() {
                                         <TableHead>
                                                 <TableRow>
                                                     <TableCell>Produkt</TableCell>
-                                                    {/* <TableCell>Kategoria FODMAP</TableCell> */}
                                                 </TableRow>
                                             </TableHead>
                                         <TableBody>
@@ -68,9 +67,6 @@ export default function HitTable() {
                                         <span className="table-product-name"><b>{p.name}</b></span> <br />
                                         {p.sub_title}
                                     </TableCell>
-                                    {/* <TableCell>
-                                        {p.fodmap}
-                                    </TableCell> */}
                                 </TableRow>
                                 ))}
                                 </TableBody>
