@@ -1,6 +1,6 @@
 
 
-import './Tables.css';
+import './Tabele.css';
 
 import Grid from '@mui/material/Unstable_Grid2';
 import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";

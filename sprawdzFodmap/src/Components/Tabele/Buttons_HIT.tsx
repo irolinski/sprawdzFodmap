@@ -1,15 +1,17 @@
-import { Button, Divider } from "@mui/material";
+import { Divider } from "@mui/material";
+
+import { HashLink as Link } from 'react-router-hash-link';
 
 
-export default function HitButtons () {
+export default function HitLinks () {
     return (
 
         <>
-            <Button href="#table-cat-20%">🟡 20%</Button>
+            <Link to="#table-cat-20%">🟡 20%</Link>
             <Divider />
-            <Button href="#table-cat-20-60%">🟠 20-60%</Button>
+            <Link to="#table-cat-20-60%">🟠 20-60%</Link>
             <Divider />
-            <Button href="#table-cat->60%">🔴 60%</Button>
+            <Link to="#table-cat->60%">🔴 60%</Link>
         </>
     )
 }

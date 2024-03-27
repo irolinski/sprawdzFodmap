@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { sortedByFodmap } from  '../../Components/productsSorted.ts';
 import TableDrawer from '../../Components/Tabele/Drawer.tsx';
 
-import './Tables.css';
+import './Tabele.css';
 import TableAccordion from '../../Components/Tabele/Accordion_Tables.tsx';
 import { FodmapTableAccordionContent_1, FodmapTableAccordionContent_2 }from '../../Components/Tabele/Text/FodmapTableAccordionContent.tsx';
 
@@ -25,8 +25,34 @@ export default function FodmapTable() {
     setOpen(false);
   };
 
-  const catEmojis = ['🍇', '🥦', '🥩', '🌾', '🐄', '🥜', '🍬', '☕️ ', '🧂']
+  const catEmojis = ['🍇', '🥦', '🥩', '🌾', '🐄', '🥜', '🍬', '☕️ ', '🧂'];
 
+//   const OwoceRef = useRef<HTMLDivElement | null>(null);
+//   const WarzywaRef = useRef<HTMLDivElement | null>(null);
+//   const MięsoRef = useRef<HTMLDivElement | null>(null);
+//   const ZbożaRef = useRef<HTMLDivElement | null>(null);
+//   const NabiałRef = useRef<HTMLDivElement | null>(null);
+//   const OrzechyRef = useRef<HTMLDivElement | null>(null);
+//   const CukryRef = useRef<HTMLDivElement | null>(null);
+//   const DodatkiRef = useRef<HTMLDivElement | null>(null);
+//   const NapojeRef = useRef<HTMLDivElement | null>(null);
+
+
+// const fodmapDietRefs = { OwoceRef, WarzywaRef, MięsoRef,ZbożaRef, NabiałRef, OrzechyRef, CukryRef, DodatkiRef, NapojeRef };
+
+// const catRefs = {
+
+//     OwoceRef: useRef<HTMLDivElement | null>(null),
+//     WarzywaRef: useRef<HTMLDivElement | null>(null),
+//     MięsoRef: useRef<HTMLDivElement | null>(null),
+//     ZbożaRef: useRef<HTMLDivElement | null>(null),
+//     NabiałRef: useRef<HTMLDivElement | null>(null),
+//     OrzechyRef: useRef<HTMLDivElement | null>(null),
+//     CukryRef: useRef<HTMLDivElement | null>(null),
+//     DodatkiRef: useRef<HTMLDivElement | null>(null),
+//     NapojeRef: useRef<HTMLDivElement | null>(null),
+
+// }
 
   return (
     <div className="table-page">

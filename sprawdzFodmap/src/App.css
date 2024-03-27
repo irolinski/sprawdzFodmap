@@ -5,6 +5,7 @@ body{
 
 .MuiBox-root{
     overflow: hidden !important;
+    padding-left: 0 !important;
 }
 
 .MuiAppBar-root{
@@ -22,13 +23,13 @@ body{
 
 .page-brand{
     margin-right: 1.1em !important;
-    font-size: 1.1em !important;
+    font-size: 1em !important;
     color: rgb(102, 102, 102) !important;
     transition: color 0.5s;
     cursor: pointer;
     text-decoration: none !important;
 
-    font-family: 'Roboto', serif;
+    font-family: 'Merriweather', serif !important;
     font-weight: 500;
     transition: color 0.8s;
 }
@@ -61,7 +62,7 @@ body{
 @media (min-width: 500px) {
 
     .page-brand{
-        font-size: 1.3em !important;
+        font-size: 1.15em !important;
     }
     .nav-buttons-div{
         right: 10px;

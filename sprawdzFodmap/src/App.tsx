@@ -21,10 +21,10 @@ export default function App() {
 
         <Routes>
                 <Route path='/' element={<Homepage />} />
-                <Route path='/tabele/fodmap' element={<Tables />} />
-                <Route path='/tabele/hit' element={<HIT_Chart />} />
-                <Route path='/info/o-nas' element={<Info />} />
-                <Route path='info/rozwoj' element={<Progress />} />
+                <Route path='/fodmap' element={<Tables />} />
+                <Route path='/hit' element={<HIT_Chart />} />
+                <Route path='/o-nas' element={<Info />} />
+                <Route path='/rozwoj' element={<Progress />} />
         </Routes>
 
         </>

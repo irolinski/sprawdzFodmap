@@ -1,33 +1,37 @@
-import { Button, Divider } from "@mui/material";
+import { Divider } from "@mui/material";
+import { HashLink as Link } from 'react-router-hash-link';
   
-  export default function FodmapButtons() {
+
+  export default function FodmapLinks() {
+
+        // const { OwoceRef, WarzywaRef, MięsoRef,ZbożaRef, NabiałRef, OrzechyRef, CukryRef, DodatkiRef, NapojeRef } = ref
 
     return (
     <>
-        <Button href="#table-cat-Owoce">🍇 Owoce</Button>
+        <Link to="#table-cat-Owoce">🍇 Owoce</Link>
                 <Divider />
-        <Button href="#table-cat-Warzywa">🥦 Warzywa</Button>
-                <Divider />
-
-        <Button href="#table-cat-Mięso">🥩 Mięso</Button>
+        <Link to='#table-cat-Warzywa'>🥦 Warzywa</Link>
                 <Divider />
 
-        <Button href="#table-cat-Zboża">🌾 Zboża </Button>
+        <Link to="#table-cat-Mięso">🥩 Mięso</Link>
                 <Divider />
 
-        <Button href="#table-cat-Nabiał">🐄 Nabiał</Button>
+        <Link to="#table-cat-Zboża">🌾 Zboża </Link>
                 <Divider />
 
-        <Button href="#table-cat-Orzechy">🥜 Orzechy</Button>
-                <Divider />
-{/* <br className="button-div-break"/> */}
-        <Button href="#table-cat-Cukry">🍬 Cukry</Button>
+        <Link to="#table-cat-Nabiał">🐄 Nabiał</Link>
                 <Divider />
 
-        <Button href="#table-cat-Napoje">☕️ Napoje</Button>
+        <Link to="#table-cat-Orzechy">🥜 Orzechy</Link>
                 <Divider />
 
-        <Button href="#table-cat-Dodatki">🧂 Dodatki</Button>
+        <Link to="#table-cat-Cukry">🍬 Cukry</Link>
+                <Divider />
+
+        <Link to="#table-cat-Napoje">☕️ Napoje</Link>
+                <Divider />
+
+        <Link to="#table-cat-Dodatki">🧂 Dodatki</Link>
         </ >
     )
   }

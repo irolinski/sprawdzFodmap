@@ -7,9 +7,6 @@ import { Link, Menu, MenuItem, Fade, IconButton, Divider } from '@mui/material';
 
 import { useState } from 'react';
 
-
-// import FoodBankIcon from '@mui/icons-material/FoodBank';
-// import CallMadeIcon from '@mui/icons-material/CallMade';
 import ListIcon from '@mui/icons-material/List';
 
 
@@ -36,13 +33,12 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
     setAnchorEl2(null);
   };
 
-  const path = 'wrazliwe-jelita'
 
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar className="navbar" position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
         <Toolbar>
-          <Link className="page-brand" font-weight="800" href={`/${path}`}>
+          <Link className="page-brand" font-weight="800" href={`/`}>
                 SprawdźFODMAP
           </Link>
           <IconButton className="drawer-button"
@@ -75,10 +71,10 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
                 onClose={handleCloseDropdown1}
                 TransitionComponent={Fade}
               >
-                <MenuItem onClick={handleCloseDropdown1} component='a' href={`/${path}/tabele/fodmap`}>d. Low FODMAP</MenuItem>
-                <MenuItem onClick={handleCloseDropdown1} component='a' href={`/${path}/tabele/hit`}>d. Przeciwhistaminowe</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/fodmap'>d. Low FODMAP</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/hit'>d. Przeciwhistaminowe</MenuItem>
                 <Divider />
-                <MenuItem onClick={handleCloseDropdown1} component='a' href={`/${path}`}>Szukaj</MenuItem>
+                <MenuItem onClick={handleCloseDropdown1} component='a' href='/'>Szukaj</MenuItem>
               </Menu>
               <Button
                 id="fade-button"
@@ -100,9 +96,9 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
                 onClose={handleCloseDropdown2}
                 TransitionComponent={Fade}
               >
-                <MenuItem onClick={handleCloseDropdown2} component='a' href={`/${path}/info/o-nas`}>O nas</MenuItem>
+                <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/o-nas'>O nas</MenuItem>
                 <Divider />
-                <MenuItem onClick={handleCloseDropdown2} component='a' href={`/${path}/info/rozwoj`}>Rozwój</MenuItem>
+                <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/rozwoj'>Rozwój</MenuItem>
 
               </Menu>
           </div>
