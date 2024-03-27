@@ -32,20 +32,20 @@ export default function FodmapTable() {
     <div className="table-page">
         <Navbar  open={ open } handleDrawerOpen={ handleDrawerOpen }/>
         <Grid container spacing={2}>
-            <div className="button-scroll button-scroll-widescreen">
+            <div className="button-scroll button-scroll-widescreen" aria-label="idź do grupy produktów" tabIndex={0}>
                 <FodmapButtons />
             </div>
             <TableDrawer open={ open } handleDrawerOpen={ handleDrawerOpen } handleDrawerClose={ handleDrawerClose } Content={ FodmapButtons }  />
             <Grid xs={12} md={5} className="table-grid">
                             <h1 className="table-header-main header">Dieta Low FODMAP</h1>
-                            <div className="table-info-div">
+                            <div className="table-info-div" tabIndex={0} aria-label='panel informacji'>
                                 <TableAccordion Title={'O co chodzi z dietą low FODMAP?'} Content={ <FodmapTableAccordionContent_1 /> } />
-                                <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> } />
+                                <TableAccordion Title={'Skąd mamy te informacje?'} Content={ <FodmapTableAccordionContent_2 /> }  aria-label="źródła" />
                             </div>
                             {sortedByFodmap.map((category, i) => ( 
-                                <div id={`table-cat-${category[0].category}`} className ="category-table" key={i}>
-                                    <h1 className="header">{`${catEmojis[i]}`} &nbsp;{`${category[0].category}`}</h1>
-                                    <TableContainer component={Paper}>
+                                <div id={`table-cat-${category[0].category}`} className ="category-table" key={i} aria-label={`Tabela zawartości fodmap w grupie produktów: ${category[0].category}`} tabIndex={0}>
+                                    <h1 className="header" ><span role='img'>{`${catEmojis[i]}`}</span> &nbsp;{`${category[0].category}`}</h1>
+                                    <TableContainer component={Paper} >
                                         <Table sx={{ minWidth: 250 }} aria-label="simple table">
                                         <colgroup>
                                             <col style={{width:'20%'}}/>

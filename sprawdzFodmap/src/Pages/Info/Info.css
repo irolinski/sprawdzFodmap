@@ -11,10 +11,13 @@
     margin: auto;
 }
 
+.about-page .drawer-button{
+    display: none; /* fixes the bug that displays the drawer button on page logo for some reason */
+}
+
 .css-ohwg9z{
     top: 8%;
 }
-
 
 .info-slide{
     margin: auto;

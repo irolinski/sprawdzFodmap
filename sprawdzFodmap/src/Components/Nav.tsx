@@ -35,75 +35,77 @@ export default function ButtonAppBar({ open, handleDrawerOpen }: any) {
 
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar className="navbar" position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
-        <Toolbar>
-          <Link className="page-brand" font-weight="800" href={`/`}>
-                SprawdźFODMAP
-          </Link>
-          /* <IconButton className="drawer-button"
-                color="inherit"
-                aria-label="open drawer"
-                onClick={handleDrawerOpen}
-                edge="start"
-                sx={{ mr: 2, ...(open && { display: 'none' }) }}
-            >
-                <ListIcon />
-            </IconButton>
-          <div className="nav-buttons-div">
-              <Button
-                id="fade-button"
-                aria-controls={openDropdown1 ? 'fade-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={openDropdown1 ? 'true' : undefined}
-                style={{color: grey[500] }}
-                onClick={handleClickDropdown1}
+    <nav>
+      <Box sx={{ flexGrow: 1 }}>
+        <AppBar className="navbar" position="static" style={{ background: 'transparent', boxShadow: 'none'}} aria-labelledby='toggle-navigation'>
+          <Toolbar>
+            <Link aria-label={"logo - link do strony głównej"} className="page-brand" font-weight="800" href={`/`}>
+                  SprawdźFODMAP
+            </Link>
+            <IconButton className="drawer-button"
+                  color="inherit"
+                  aria-label="open drawer"
+                  onClick={handleDrawerOpen}
+                  edge="start"
+                  sx={{ mr: 2, ...(open && { display: 'none' }) }}
               >
-                Diety
-              </Button>
-              <Menu
-                id="fade-menu"
-                MenuListProps={{
-                  'aria-labelledby': 'fade-button',
-                }}
-                anchorEl={anchorEl1}
-                open={openDropdown1}
-                onClose={handleCloseDropdown1}
-                TransitionComponent={Fade}
-              >
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/fodmap'>d. Low FODMAP</MenuItem>
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/hit'>d. Przeciwhistaminowe</MenuItem>
-                <Divider />
-                <MenuItem onClick={handleCloseDropdown1} component='a' href='/'>Szukaj</MenuItem>
-              </Menu>
-              <Button
-                id="fade-button"
-                aria-controls={openDropdown2 ? 'fade-menu' : undefined}
-                aria-haspopup="true"
-                aria-expanded={openDropdown2 ? 'true' : undefined}
-                style={{color: grey[500] }}
-                onClick={handleClickDropdown2}
-              >
-                Info
-              </Button>
-              <Menu
-                id="fade-menu"
-                MenuListProps={{
-                  'aria-labelledby': 'fade-button',
-                }}
-                anchorEl={anchorEl2}
-                open={openDropdown2}
-                onClose={handleCloseDropdown2}
-                TransitionComponent={Fade}
-              >
-                <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/o-nas'>O nas</MenuItem>
-                <Divider />
-                <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/rozwoj'>Rozwój</MenuItem>
+                  <ListIcon />
+              </IconButton>
+            <div className="nav-buttons-div">
+                <Button
+                  id="fade-button"
+                  aria-controls={openDropdown1 ? 'fade-menu' : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown1 ? 'true' : undefined}
+                  style={{color: grey[500] }}
+                  onClick={handleClickDropdown1}
+                >
+                  Diety
+                </Button>
+                <Menu
+                  id="fade-menu"
+                  MenuListProps={{
+                    'aria-labelledby': 'fade-button',
+                  }}
+                  anchorEl={anchorEl1}
+                  open={openDropdown1}
+                  onClose={handleCloseDropdown1}
+                  TransitionComponent={Fade}
+                >
+                  <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/fodmap' aria-label="diety low fodmap">d. Low FODMAP</MenuItem>
+                  <MenuItem onClick={handleCloseDropdown1} component='a' href='/#/hit' aria-label="diety przeciwhistaminowe">d. Przeciwhistaminowe</MenuItem>
+                  <Divider />
+                  <MenuItem onClick={handleCloseDropdown1} component='a' href='/'>Szukaj</MenuItem>
+                </Menu>
+                <Button
+                  id="fade-button"
+                  aria-controls={openDropdown2 ? 'fade-menu' : undefined}
+                  aria-haspopup="true"
+                  aria-expanded={openDropdown2 ? 'true' : undefined}
+                  style={{color: grey[500] }}
+                  onClick={handleClickDropdown2}
+                >
+                  Info
+                </Button>
+                <Menu
+                  id="fade-menu"
+                  MenuListProps={{
+                    'aria-labelledby': 'fade-button',
+                  }}
+                  anchorEl={anchorEl2}
+                  open={openDropdown2}
+                  onClose={handleCloseDropdown2}
+                  TransitionComponent={Fade}
+                >
+                  <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/o-nas'>O nas</MenuItem>
+                  <Divider />
+                  <MenuItem onClick={handleCloseDropdown2} component='a' href='/#/rozwoj'>Rozwój</MenuItem>
 
-              </Menu>
-          </div>
-        </Toolbar>
-      </AppBar>
-    </Box>
+                </Menu>
+            </div>
+          </Toolbar>
+        </AppBar>
+      </Box>
+    </nav>
   );
 }

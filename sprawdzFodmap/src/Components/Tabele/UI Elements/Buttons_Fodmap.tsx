@@ -4,34 +4,33 @@ import { HashLink as Link } from 'react-router-hash-link';
 
   export default function FodmapLinks() {
 
-        // const { OwoceRef, WarzywaRef, MięsoRef,ZbożaRef, NabiałRef, OrzechyRef, CukryRef, DodatkiRef, NapojeRef } = ref
 
     return (
     <>
-        <Link to="#table-cat-Owoce">🍇 Owoce</Link>
+        <Link to="#table-cat-Owoce" aria-label='Owoce' >🍇 Owoce</Link>
                 <Divider />
-        <Link to='#table-cat-Warzywa'>🥦 Warzywa</Link>
-                <Divider />
-
-        <Link to="#table-cat-Mięso">🥩 Mięso</Link>
+        <Link to='#table-cat-Warzywa' aria-label='Warzywa'>🥦 Warzywa</Link>
                 <Divider />
 
-        <Link to="#table-cat-Zboża">🌾 Zboża </Link>
+        <Link to="#table-cat-Mięso" aria-label='Mięso'>🥩 Mięso</Link>
                 <Divider />
 
-        <Link to="#table-cat-Nabiał">🐄 Nabiał</Link>
+        <Link to="#table-cat-Zboża" aria-label='Zboża'>🌾 Zboża </Link>
                 <Divider />
 
-        <Link to="#table-cat-Orzechy">🥜 Orzechy</Link>
+        <Link to="#table-cat-Nabiał" aria-label='Nabiał'>🐄 Nabiał</Link>
                 <Divider />
 
-        <Link to="#table-cat-Cukry">🍬 Cukry</Link>
+        <Link to="#table-cat-Orzechy" aria-label='Orzechy'>🥜 Orzechy</Link>
                 <Divider />
 
-        <Link to="#table-cat-Napoje">☕️ Napoje</Link>
+        <Link to="#table-cat-Cukry" aria-label='Cukry'>🍬 Cukry</Link>
                 <Divider />
 
-        <Link to="#table-cat-Dodatki">🧂 Dodatki</Link>
+        <Link to="#table-cat-Napoje" aria-label='Napoje'>☕️ Napoje</Link>
+                <Divider />
+
+        <Link to="#table-cat-Dodatki" aria-label='Dodatki'>🧂 Dodatki</Link>
         </ >
     )
   }

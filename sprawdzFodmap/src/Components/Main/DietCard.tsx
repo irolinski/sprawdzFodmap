@@ -15,7 +15,7 @@ import { styled } from '@mui/material/styles';
 import { Fragment } from 'react/jsx-runtime';
 
 const ElementTip = styled(({ className, ...props }: TooltipProps) => (
-    <Tooltip {...props} arrow classes={{ popper: className }} />
+    <Tooltip {...props} arrow classes={{ popper: className }}  />
   ))(({ theme }) =>  ({
     [`& .${tooltipClasses.tooltip}`]: {
       backgroundColor: 'rgba(0,0,0,.5)',
@@ -41,7 +41,7 @@ export default function DietCard({ name, sub_title, fodmap, max_use, histamine, 
 
     return(
 
-    <Paper className='diet-card'>
+    <Paper className='diet-card' tabIndex={0}>
         <header>
             <h3 className="title">{name}</h3> 
                 {notes && (
