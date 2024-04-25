@@ -6,6 +6,7 @@ SprawdzFodmap
 <h4 align="center">A React-based web-app with tools for people suffering from IBS, SIBO and other gastrointestinal diseases.</h4>
 
 <p align="center"> 
+  <img height="350px" src="https://github.com/szczek/sprawdzFodmap/assets/66899019/54873355-d8fb-4a04-9680-ed575c333f2c" />
   <img height="350px" src="https://github.com/szczek/sprawdzFodmap/assets/66899019/5052c266-e3c4-4f64-8094-6fc3da351acf" />
 </p>
 
