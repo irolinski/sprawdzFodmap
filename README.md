@@ -11,9 +11,10 @@ SprawdzFodmap
 
 ## Key Features
 
-* Original minimalistic design based on my client's guidelines.
-* Modular code design that makes editing the content a matter of seconds.
-* Slideshows and carousels written from scratch to allow both portrait and landscape orientation images in one series and also to fit the design choices.
+* Check what you should and shouldn't eat on a lowFODMAP/anti-HIT diet in a matter of literal seconds using quick search function available on the homepage
+* Learn the dietary restrictions category by category by working through the easily navigatble set of tables
+* First such webapp available on the polish market
+* Fully responsive design and a sleek UI make this app perfectly suitable for on-the-go usage
 
 ## Credits
 
