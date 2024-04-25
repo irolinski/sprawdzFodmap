@@ -5,8 +5,8 @@ SprawdzFodmap
 
 <h4 align="center">A React-based web-app with tools for people suffering from IBS, SIBO and other gastrointestinal diseases.</h4>
 
-<p align="center">![Nagraniezekranu2024-04-25o02 04 52-ezgif com-loop-count](https://github.com/szczek/sprawdzFodmap/assets/66899019/5052c266-e3c4-4f64-8094-6fc3da351acf)
-
+<p align="center"> 
+  <img src="https://github.com/szczek/sprawdzFodmap/assets/66899019/5052c266-e3c4-4f64-8094-6fc3da351acf" />
 </p>
 
 ## Key Features
