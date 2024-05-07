@@ -8,17 +8,12 @@ import Info  from './Pages/Info/About.tsx';
 import Progress  from './Pages/Info/Progress.tsx';
 
 
-import './App.css';
+import './App.scss';
 
 
 export default function App() {
-
-
-
-
     return(
         <>
-
         <Routes>
                 <Route path='/' element={<Homepage />} />
                 <Route path='/fodmap' element={<Tables />} />
@@ -26,7 +21,6 @@ export default function App() {
                 <Route path='/o-nas' element={<Info />} />
                 <Route path='/rozwoj' element={<Progress />} />
         </Routes>
-
         </>
     )
 }

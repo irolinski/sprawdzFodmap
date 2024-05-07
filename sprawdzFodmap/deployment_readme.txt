@@ -22,7 +22,7 @@ It was resolved by:
 
 - removing the sub-path from the 'homepage' parameter in package.json
 - changing the basename in the router to 'basename={process.env.PUBLIC_URL}'
-- setting the base in site config to '/' (which is the default iirc)
+- setting the base in vite config to '/' (which is the default iirc)
 - in the built html file, correcting routes to start with './' instead of '/'
 
 
