@@ -1,250 +1,251 @@
 html {
-    scroll-behavior: smooth;
-  }
+  scroll-behavior: smooth;
+}
 
 .table-page .category-table {
-    margin: 0.8em;
-    margin-top: 2em !important;
-    padding-bottom: 2em;
+  margin: 0.8em;
+  margin-top: 2em !important;
+  padding-bottom: 2em;
 }
 
-.table-accordion{
-    position: initial !important;
-    font-family: 'Nunito Sans', sans-serif;
+.table-accordion {
+  position: initial !important;
+  font-family: "Nunito Sans", sans-serif;
 }
 
-
-.table-page h1{
-    font-size: 1.5em;
+.table-page h1 {
+  font-size: 1.5em;
 }
 
-.table-header-main{
-    margin-top: 1em;
-    margin-bottom: 1em;
-    font-size: 1.7em !important;
-    text-align: center;
-    transform: translateY(-1em);
+.table-header-main {
+  margin-top: 1em;
+  margin-bottom: 1em;
+  font-size: 1.7em !important;
+  text-align: center;
+  transform: translateY(-1em);
 }
 
-
-.table-info-div{
-    margin-bottom: 2em;
-    padding-bottom: 4em;
-    border-bottom: 0.8px #00000014 double;
-    margin: auto;
-    max-width: 75vw;
-    padding-top: 2em;
-    border-top: 1px solid #0000001a;
+.table-info-div {
+  margin-bottom: 2em;
+  padding-bottom: 4em;
+  border-bottom: 0.8px #00000014 double;
+  margin: auto;
+  max-width: 75vw;
+  padding-top: 2em;
+  border-top: 1px solid #0000001a;
 }
 
-.accordion-list > li{
-    margin: 0.5em !important;
+.accordion-list > li {
+  margin: 0.5em !important;
 }
 
-.sources-header{
-    margin-bottom: 0;
+.sources-header {
+  margin-bottom: 0;
 }
 
 .source-list a {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
 }
 
-.MuiDrawer-docked{
-    width: 0px !important; /* this fixes the drawer taking up space in the grid even when it's closed */
-  }
+.MuiDrawer-docked {
+  width: 0px !important; /* this fixes the drawer taking up space in the grid even when it's closed */
+}
 
-.MuiDrawer-docked .MuiDrawer-paper{
-        background-color: #fafafafa;
-        box-sizing: border-box;
+.MuiDrawer-docked .MuiDrawer-paper {
+  background-color: #fafafafa;
+  box-sizing: border-box;
 }
 
 .MuiDrawer-docked .MuiDrawer-paper a {
-    font-size: 1em;
+  font-size: 1em;
 }
 
-.table-page .drawer-button{
-    position: fixed !important;
-    color: black !important;
-    background: #e7e7e7e1 !important;
-    padding: 10px;
-    font-size: 2em !important;
-    right: 5px;
-    bottom: 25px; 
+.table-page .drawer-button {
+  position: fixed !important;
+  color: black !important;
+  background: #e7e7e7e1 !important;
+  padding: 10px;
+  font-size: 2em !important;
+  right: 5px;
+  bottom: 25px;
 }
 
-.drawer-button > svg{
-    font-size: 1.1em;
-    transform: translateY(-0.5px); /* 2px for foodbank icon in case I want to go back to it */ 
-
-} 
-
-
-
-.table-accordion{
-    box-shadow: inset 0px -1px 0px 0px rgba(0,0,0,0.2) !important;
+.drawer-button > svg {
+  font-size: 1.1em;
+  transform: translateY(
+    -0.5px
+  ); /* 2px for foodbank icon in case I want to go back to it */
 }
 
-.button-scroll{
-    overflow: auto;
-    white-space: nowrap;
-    width: 75%;
-    margin: auto;
-    padding: 1em;
+.table-accordion {
+  box-shadow: inset 0px -1px 0px 0px rgba(0, 0, 0, 0.2) !important;
+}
+
+.button-scroll {
+  overflow: auto;
+  white-space: nowrap;
+  width: 75%;
+  margin: auto;
+  padding: 1em;
+  left: 8%;
+  top: 25%;
+  white-space: normal;
+  overflow: hidden;
+}
+
+.button-scroll a {
+  padding-bottom: 0.1em;
+  font-family: "Inter", sans-serif;
+  font-size: 0.8em !important;
+  color: #212121;
+  width: 100%;
+  display: block;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  color: inherit;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  min-width: 64px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  -webkit-transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  color: #000000;
+  transition: background-color 0.4s;
+}
+
+.button-scroll a:hover {
+  background-color: #f6fafe;
+  transition: background-color 0.1s;
+}
+
+.button-scroll > a {
+  white-space: nowrap;
+}
+
+.button-scroll button {
+  width: 144px;
+}
+
+.table-grid {
+  right: 25%;
+  margin: auto;
+  margin-top: 6em;
+  margin-left: 0;
+}
+
+.category-list {
+  margin: auto;
+}
+
+.table-div {
+  margin-top: 8em;
+}
+
+.table-page table {
+  table-layout: fixed;
+  padding: 1.5em;
+}
+
+.table-page th {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.2rem !important;
+  background-color: #00000003;
+}
+
+.fodmap-table-div {
+  padding: 0.7em;
+  text-align: center;
+  font-weight: 600;
+}
+
+.table-page td {
+  background-color: #c9c9c92e;
+}
+
+.table-product-name {
+  font-size: 1.1em;
+}
+
+.low-fodmap-table-cell {
+  background-color: #4caf50 !important;
+}
+
+.mid-fodmap-table-cell {
+  background-color: #ffc107 !important;
+}
+
+.high-fodmap-table-cell {
+  background-color: #f54335 !important;
+}
+
+@media (min-width: 905px) {
+  .button-scroll {
+    position: sticky !important;
+    width: 90px;
     left: 8%;
     top: 25%;
     white-space: normal;
     overflow: hidden;
-}
+    margin-top: 6em;
+    display: table; /* fixes the bug that makes it not stick in Firefox */
+    padding-right: 6em;
+    border-right: 1px rgba(0, 0, 0, 0.04) solid;
+  }
 
-.button-scroll a{
-    padding-bottom: 0.1em;
-    font-family: 'Inter', sans-serif;
-    font-size: 0.8em !important;
-    color: #212121;
-    width: 100%;
-    display: block;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    position: relative;
-    box-sizing: border-box;
-    -webkit-tap-highlight-color: transparent;
-    background-color: transparent;
-    outline: 0;
-    border: 0;
-    margin: 0;
-    border-radius: 0;
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    -webkit-text-decoration: none;
-    text-decoration: none;
-    color: inherit;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: 500;
-    font-size: 0.875rem;
-    line-height: 1.75;
-    letter-spacing: 0.02857em;
-    text-transform: uppercase;
-    min-width: 64px;
-    padding: 6px 8px;
-    border-radius: 4px;
-    -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    color: #000000;
-    transition: background-color 0.4s;
-}
-
-.button-scroll a:hover{
-    background-color: #F6FAFE;
-    transition: background-color 0.1s;
-
-}
-
-.button-scroll > a {
-    white-space: nowrap;
-}
-
-.button-scroll button{
-    width: 144px;
-}
-
-.table-grid{
-   right: 25%; 
-   margin: auto;
-   margin-top: 6em;
-   margin-left: 0;
-}
-
-.category-list{
-    margin: auto;
-}
-
-.table-div{
-    margin-top: 8em;
-}
-
-.table-page table{
-    table-layout: fixed;
-    padding: 1.5em;
-}
-
-.table-page th{
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 1.2rem !important; 
-    background-color: #00000003;
-}
-
-.fodmap-table-div{
-    padding: 0.7em;
-    text-align: center;
-    font-weight: 600;
-}
-
-.table-page td{
-    background-color: #c9c9c92e;
-}
-
-.table-product-name{
-    font-size: 1.1em;
-}
-
-.low-fodmap-table-cell{
-    background-color: #4CAF50 !important;
-}
-
-.mid-fodmap-table-cell{
-    background-color: #FFC107 !important;
-}
-
-.high-fodmap-table-cell{
-    background-color: #F54335 !important;
-}
-
-
-@media (min-width: 905px) {
-    .button-scroll{
-        position: sticky !important;
-        width: 90px;
-        left: 8%;
-        top: 25%;
-        white-space: normal;
-        overflow: hidden;
-        margin-top: 6em;
-        display: table; /* fixes the bug that makes it not stick in Firefox */
-        padding-right: 6em;
-        border-right: 1px rgba(0, 0, 0, 0.04) solid;
-    }
-
-    .button-div-break,
-    .drawer-button,
-    .MuiDrawer-root > .MuiPaper-root{
-        display: none !important;
-    }
+  .button-div-break,
+  .drawer-button,
+  .MuiDrawer-root > .MuiPaper-root {
+    display: none !important;
+  }
 }
 
 @media (max-width: 905px) {
-    .button-scroll-widescreen{
-        display: none;
-    }
+  .button-scroll-widescreen {
+    display: none;
+  }
 }
 
-@media (max-width: 500px){
-    
-    .table-page table th{
-        font-size: 0.9em !important;
-    }
+@media (max-width: 500px) {
+  .table-page table th {
+    font-size: 0.9em !important;
+  }
 
-    .table-page table td{
-        font-size: 0.7em !important;
-    }
-    
+  .table-page table td {
+    font-size: 0.7em !important;
+  }
 }

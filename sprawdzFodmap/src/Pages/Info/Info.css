@@ -1,143 +1,136 @@
-
-
-.about-page .MuiGrid-root{
-    margin: 0;
-    width: 100%;
+.about-page .MuiGrid-root {
+  margin: 0;
+  width: 100%;
 }
 
-.about-page .diet-grid{
-    justify-content: unset;
-    max-width: 100%;
-    margin: auto;
+.about-page .diet-grid {
+  justify-content: unset;
+  max-width: 100%;
+  margin: auto;
 }
 
-.about-page .drawer-button{
-    display: none; /* fixes the bug that displays the drawer button on page logo for some reason */
+.about-page .drawer-button {
+  display: none; /* fixes the bug that displays the drawer button on page logo for some reason */
 }
 
-.css-ohwg9z{
-    top: 8%;
+.css-ohwg9z {
+  top: 8%;
 }
 
-.info-slide{
-    margin: auto;
-    border-radius: 20px;
-    width: 90%;
-    height: 100%;
-    max-width: 480px;
-    padding-bottom: 2em;
+.info-slide {
+  margin: auto;
+  border-radius: 20px;
+  width: 90%;
+  height: 100%;
+  max-width: 480px;
+  padding-bottom: 2em;
 }
 
-
-.info-slide h2{
-    font-family: 'Merriweather', sans-serif;
-    font-weight: 600;
-    font-size: 1.5em ;
-    text-align: center;
-    margin-bottom: 1.5em;
+.info-slide h2 {
+  font-family: "Merriweather", sans-serif;
+  font-weight: 600;
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 1.5em;
 }
 
-.slide-text{
-    list-style: none;
-    text-align: left;
-    font-size: 0.8em;
-    position: relative;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
+.slide-text {
+  list-style: none;
+  text-align: left;
+  font-size: 0.8em;
+  position: relative;
+  padding: 0;
+  font-family: "Inter", sans-serif;
 }
 
-
-.slide-text li{
-    margin: 1em;
+.slide-text li {
+  margin: 1em;
 }
 
-.about-page .li-indent{
-    padding-left: 1.9em;
-    text-indent: -2em;
+.about-page .li-indent {
+  padding-left: 1.9em;
+  text-indent: -2em;
 }
 
-.about-page .li-no-indent{
-    padding-left: 1.9em;
-    padding-bottom: 0.5em;
+.about-page .li-no-indent {
+  padding-left: 1.9em;
+  padding-bottom: 0.5em;
 }
 
-.ibs-tracker-span{
-    text-decoration: underline;
-    font-weight: 500;
-    transition: color 0.7s;
+.ibs-tracker-span {
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.7s;
 }
 
-.ibs-tracker-span:hover{
-    color: rgba(0, 0, 0, 0.555);
-    cursor: help;
+.ibs-tracker-span:hover {
+  color: rgba(0, 0, 0, 0.555);
+  cursor: help;
 }
 
-.about-page .slide-text a{
-    word-wrap: break-word;
+.about-page .slide-text a {
+  word-wrap: break-word;
 }
 
-.about-page .slide-image{
-    max-width: 200px;
+.about-page .slide-image {
+  max-width: 200px;
 }
 
-.about-page .email-link{
-    font-size: 0.9em;
-    word-wrap: normal !important;
-    color: #255B70;
+.about-page .email-link {
+  font-size: 0.9em;
+  word-wrap: normal !important;
+  color: #255b70;
 }
 
-.about-page .lottie{
-    margin: auto;
-    margin-top: 2em;
+.about-page .lottie {
+  margin: auto;
+  margin-top: 2em;
 }
 
-.about-page .lottie-link{
-    color: #edeaea;
+.about-page .lottie-link {
+  color: #edeaea;
 }
 
-#lottie-plant{
-    scale: 0.95;
-
+#lottie-plant {
+  scale: 0.95;
 }
 
+@media (min-width: 500px) {
+  .about-page .info-slide h2 {
+    font-size: 1.7em;
+  }
+  .about-page .slide-text {
+    font-size: 1em;
+  }
 
-@media(min-width: 500px){
+  .about-page .lottie {
+    scale: 1.4;
+  }
 
-    .about-page .info-slide h2{
-        font-size: 1.7em ;
-    }
-    .about-page .slide-text{
-        font-size: 1em;
-    }
-
-    .about-page .lottie{
-        scale: 1.4;
-    }
-
-    #lottie-plant{
-        transform:translate( 100px ,-100px);
-        scale: 0.85;
-    }
+  #lottie-plant {
+    transform: translate(100px, -100px);
+    scale: 0.85;
+  }
 }
 
-@media (min-width: 905px){
-    .css-1abc02a .MuiButtonBase-root,
-    .css-hn784z .MuiButtonBase-root{
-        opacity: 0.4 !important; 
-    }
+@media (min-width: 905px) {
+  .css-1abc02a .MuiButtonBase-root,
+  .css-hn784z .MuiButtonBase-root {
+    opacity: 0.4 !important;
+  }
 
-    .about-page .info-slide h2{
-        font-size: 1.9em ;
-    }
-    .about-page .slide-text{
-        font-size: 1.1em;
-    }
+  .about-page .info-slide h2 {
+    font-size: 1.9em;
+  }
+  .about-page .slide-text {
+    font-size: 1.1em;
+  }
 
-    .about-page .lottie{
-        scale: 1.5;
-    }
+  .about-page .lottie {
+    scale: 1.5;
+  }
 
-    #lottie-plant{
-        scale: 0.9;
-    }
+  #lottie-plant {
+    scale: 0.9;
+  }
 }
