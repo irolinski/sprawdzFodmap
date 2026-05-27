@@ -38,7 +38,7 @@ export default function CookieConsentBanner(disclaimerModalState: {
       customColors={{ primary: "#3f6d3b" }}
       language="pl"
       customStorageKey={COOKIE_CONSENT_STORAGE_KEY}
-      modalIsOpen={cookieConsentBannerIsOpened}
+      componentIsOpen={cookieConsentBannerIsOpened}
     />
   );
 }
