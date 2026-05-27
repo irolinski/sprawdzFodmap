@@ -33,6 +33,8 @@ export type NavLink = {
   adress: string;
 };
 
+const CONSENT_DISABLED_TIME_MS = 1000;
+
 export default function App() {
   function search(arr: Array<ProductProp>, q: string) {
     const a: Array<ProductProp> = [];
@@ -71,11 +73,8 @@ export default function App() {
 
     setTimeout(() => {
       setdisclaimerCheckBoxOpacity(1);
-    }, 2000);
-
-    setTimeout(() => {
       setPointerEvtsModalCheckbox("");
-    }, 3000);
+    }, CONSENT_DISABLED_TIME_MS);
   };
 
   const handleCloseModal = () => {
