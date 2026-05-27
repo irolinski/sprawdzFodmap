@@ -1,87 +1,83 @@
-body{
-    overflow-x: hidden;
-    padding-right: 0px !important; /* fixes the bug the makes the elements move on activating nav dropdown button */
+body {
+  overflow-x: hidden;
+  padding-right: 0px !important; /* fixes the bug the makes the elements move on activating nav dropdown button */
 }
 
-.MuiBox-root{
-    overflow: hidden !important;
-    /* padding-left: 0 !important; */
+.MuiBox-root {
+  overflow: hidden !important;
+  /* padding-left: 0 !important; */
 }
 
-.MuiAppBar-root{
-    display: inline-block !important;
+.MuiAppBar-root {
+  display: inline-block !important;
 }
 
-.MuiToolbar-root{
-    position: static !important; /* fix for the bug that makes the nav lift after clicking any button */
+.MuiToolbar-root {
+  position: static !important; /* fix for the bug that makes the nav lift after clicking any button */
 }
 
-.navbar{
-    border-bottom: 0.4px solid rgb(220, 220, 220);
-    padding: 0.5em;
+.navbar {
+  border-bottom: 0.4px solid rgb(220, 220, 220);
+  padding: 0.5em;
 }
 
-.page-brand{
-    margin-right: 1.1em !important;
-    font-size: 1em !important;
-    color: rgb(102, 102, 102) !important;
-    transition: color 0.5s;
-    cursor: pointer;
-    text-decoration: none !important;
+.page-brand {
+  margin-right: 1.1em !important;
+  font-size: 1em !important;
+  color: rgb(102, 102, 102) !important;
+  transition: color 0.5s;
+  cursor: pointer;
+  text-decoration: none !important;
 
-    font-family: 'Merriweather', serif !important;
-    font-weight: 500;
-    transition: color 0.8s;
+  font-family: "Merriweather", serif !important;
+  font-weight: 500;
+  transition: color 0.8s;
 }
 
-.page-brand:hover{
-   color: rgba(128, 128, 128, 0.739) !important;
-
+.page-brand:hover {
+  color: rgba(128, 128, 128, 0.739) !important;
 }
 
-.header{
-    font-family: 'Merriweather', serif;
+.header {
+  font-family: "Merriweather", serif;
 }
 
-
-
-.MuiButton-text{
-    font-family: 'Nunito Sans', sans-serif !important;
-    font-weight: 500;
+.MuiButton-text {
+  font-family: "Nunito Sans", sans-serif !important;
+  font-weight: 500;
 }
 
-.nav-buttons-div{
-    right: 5px;
-    position: absolute;
+.nav-buttons-div {
+  right: 5px;
+  position: absolute;
 }
 
-.drawer-button{
-    display: none;
+.drawer-button {
+  display: none;
 }
 
 @media (max-width: 900px) {
-    .page-brand{
-        position: absolute;
-        left: 18px;
-    }
+  .page-brand {
+    position: absolute;
+    left: 18px;
+  }
 }
 
 @media (min-width: 500px) {
-
-    .page-brand{
-        font-size: 1.15em !important;
-    }
-    .nav-buttons-div{
-        right: 10px;
-    }
+  .page-brand {
+    font-size: 1.15em !important;
+  }
+  .nav-buttons-div {
+    right: 10px;
+  }
 }
 
 @media (min-width: 900px) {
-    .navbar{
-        border-bottom: 0;
-        padding: 0 !important;
-    }
-    .nav-buttons-div{
-        right: 20px;
-    }
+  .navbar {
+    border-bottom: 0;
+    padding: 0 !important;
+  }
+  .nav-buttons-div {
+    right: 20px;
+  }
 }
