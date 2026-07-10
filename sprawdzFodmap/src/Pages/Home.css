@@ -119,6 +119,10 @@
   display: none;
 }
 
+.cookie-consent-react > div {
+  box-sizing: border-box;
+}
+
 @media (min-width: 500px) {
   .disclaimer-modal {
     width: 40vw;
