@@ -19,7 +19,7 @@
     "@mui/material": "^5.15.11",
     "@mui/styled-engine-sc": "^6.0.0-alpha.17",
     "@types/react-router-hash-link": "^2.4.9",
-    "cookie-consent-react": "1.2.3",
+    "cookie-consent-react": "1.2.8",
     "posthog-js": "^1.116.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
